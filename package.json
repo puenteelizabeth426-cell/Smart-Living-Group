@@ -3,18 +3,18 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "echo no lint"
+    "lint": "echo no lint && exit 0"
   },
   "dependencies": {
-    "next": "latest",
-    "react": "latest",
-    "react-dom": "latest",
-    "lucide-react": "latest"
+    "next": "14.2.5",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "lucide-react": "^0.468.0"
   },
   "devDependencies": {
-    "typescript": "latest",
-    "@types/node": "latest",
-    "@types/react": "latest",
-    "@types/react-dom": "latest"
+    "typescript": "^5",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18"
   }
 }
