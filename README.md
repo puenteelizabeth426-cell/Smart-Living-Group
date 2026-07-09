@@ -1,21 +1,11 @@
-# Smart Living Group V3 Final
+# Smart Living Group Clean Start
 
-Clean final website.
+Clean Next.js website for Smart Living Group.
 
-Only includes:
+Only services included:
 - Outdoor Audio
 - Landscape Lighting
 - Outdoor TVs
 - Motorized Shades
 
-Includes:
-- Video hero
-- PDF catalog
-- Premium gallery
-- Process
-- Service area
-- Testimonials
-- Contact
-- Floating call/email buttons
-
-No smart home automation, no security, no networking, no commercial technology.
+No security, no networking, no smart home automation, no commercial technology.
