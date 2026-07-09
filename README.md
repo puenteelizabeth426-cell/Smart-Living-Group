@@ -1,3 +1,11 @@
-# Smart Living Group — Next.js Website
+# Smart Living Group V2
 
-Vercel-ready project.
+Updated luxury website:
+- Outdoor Audio
+- Landscape Lighting
+- Outdoor TVs
+- Motorized Shades
+- Video hero
+- Catalog PDF
+- Image gallery
+- Vercel-ready
