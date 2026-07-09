@@ -1,25 +1,21 @@
-# Smart Living Group Premium Website
+# Smart Living Group V3 Final
 
-Premium Next.js website for Smart Living Group.
+Clean final website.
 
-## Services
+Only includes:
 - Outdoor Audio
 - Landscape Lighting
 - Outdoor TVs
 - Motorized Shades
 
-## Includes
-- Luxury video hero
-- Premium services sections
-- Catalog PDF section
-- Large image gallery
-- Premium brand section
-- Process section
-- Service area section
+Includes:
+- Video hero
+- PDF catalog
+- Premium gallery
+- Process
+- Service area
 - Testimonials
-- Contact section
-- Floating call and email buttons
-- Vercel-ready structure
+- Contact
+- Floating call/email buttons
 
-## Deploy
-Upload/push all files to GitHub. Vercel will deploy automatically.
+No smart home automation, no security, no networking, no commercial technology.
