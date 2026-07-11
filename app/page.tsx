@@ -44,8 +44,8 @@ export default function Home() {
   return (
     <main>
       <nav className="nav">
-        <a href="#home" className="brand" aria-label="Smart Living Group home">
-          <img src="/projects/logo.webp" alt="Smart Living Group logo" />
+        <a href="#home" className="brand brandLogo" aria-label="Smart Living Group home">
+          <img src="/projects/logo.webp" alt="Smart Living Group" className="chromeLogo" />
         </a>
         <div className="navLinks">
           <a href="#services">Services</a>
