@@ -53,7 +53,7 @@ export default function Home() {
           <a href="#catalog">Catalog</a>
           <a href="#contact">Contact</a>
         </div>
-        <a className="navCta" href="tel:+1XXXXXXXXXX">Call Now</a>
+        <a className="navCta" href="tel:+18175103103">Call Now</a>
       </nav>
 
       <section id="home" className="hero">
@@ -187,7 +187,7 @@ export default function Home() {
           <p>Request a consultation for outdoor audio, landscape lighting, outdoor TVs or motorized shades.</p>
         </div>
         <div className="contactActions">
-          <a href="tel:+1XXXXXXXXXX" className="contactButton"><Phone /> Call Smart Living Group</a>
+          <a href="tel:+18175103103" className="contactButton"><Phone /> (817) 510-3103</a>
           <a href="mailto:Smartlivingroup@gmail.com" className="contactButton"><Mail /> Smartlivingroup@gmail.com</a>
         </div>
       </section>
