@@ -152,7 +152,7 @@ export default function Home() {
           <p className="eyebrow">Catalog</p>
           <h2>Explore Smart Living Group services.</h2>
           <p>Browse our full range of outdoor audio, landscape lighting, outdoor TVs and motorized shade solutions.</p>
-          <a className="button primary" href="/catalog.pdf" target="_blank" rel="noreferrer">Open Catalog <ArrowRight size={18} /></a>
+          <a className="button primary" href="https://myfiles.formadoc.com/sharing/273c8e3c" target="_blank" rel="noreferrer">Open Catalog <ArrowRight size={18} /></a>
         </div>
       </section>
 
