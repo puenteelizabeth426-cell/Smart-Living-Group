@@ -40,6 +40,78 @@ const services = [
 const process = ["Consultation", "Design", "Installation", "Ongoing Support"];
 const brands = ["Sonance", "Coastal Source", "Lutron", "Samsung", "Future Automation", "MantelMount", "Savant", "Josh.ai"];
 
+const catalogProducts = [
+  {
+    name: "Patio Series 4.1",
+    category: "Series",
+    coverage: "1,000 sq ft",
+    copy: "A compact yet powerful outdoor system optimized to deliver quality sound across patios and smaller entertaining areas.",
+    specs: ["Four 4\" speakers", "One 8\" subwoofer", "200W amplifier"]
+  },
+  {
+    name: "Garden Series 8.1",
+    category: "Series",
+    coverage: "3,500 sq ft",
+    copy: "Fills large gardens and outdoor areas with rich, immersive sound. Ships complete with a full wiring harness.",
+    specs: ["Eight 4\" speakers", "One subwoofer", "Two 125W amplifiers"]
+  },
+  {
+    name: "Landscape 8.1",
+    category: "Series",
+    coverage: "3,500 sq ft",
+    copy: "Engineered for dynamic, high-fidelity sound across extensive outdoor environments for a truly immersive experience.",
+    specs: ["Eight 6\" speakers", "One 15\" subwoofer", "Two 750W DSP amplifiers"]
+  },
+  {
+    name: "Landscape Bollard 2.2",
+    category: "Bollard",
+    coverage: "1,000 sq ft",
+    copy: "Sculptural bollard speakers tuned for optimal outdoor performance, ensuring deep bass and clear highs.",
+    specs: ["Two bollard speakers", "Two 6.5\" subwoofers", "3×700W amplifier"]
+  },
+  {
+    name: "Landscape Bollard 4.4",
+    category: "Bollard",
+    coverage: "1,000 sq ft",
+    copy: "Tailored to deliver rich, immersive sound and enhance landscapes with superior audio quality.",
+    specs: ["Four bollard speakers", "Four 6.5\" subwoofers", "Two triple 700W amps @ 8Ω"]
+  },
+  {
+    name: "Ambisonic Bollard 4.4",
+    category: "Bollard",
+    coverage: "1,000 sq ft",
+    copy: "Detailed, immersive ambisonic sound, perfect for high-quality outdoor audio environments.",
+    specs: ["Four ambisonic speakers, 1\" ribbon tweeters", "Four 10\" subwoofers", "Two triple 700W amps @ 8Ω"]
+  },
+  {
+    name: "Coastal Source 4.1",
+    category: "Specialty",
+    coverage: "3,500 sq ft",
+    copy: "Rich, balanced sound throughout large outdoor spaces, perfect for entertaining or immersive listening.",
+    specs: ["Four 10\" two-way speakers", "One 14\" subwoofer", "Four 600W outdoor amplifiers"]
+  },
+  {
+    name: "Flagship Line Array Bollard 2.1",
+    category: "Line Array",
+    coverage: "Flagship",
+    copy: "Line array design engineered for superior outdoor performance with deep bass and clear, precise sound.",
+    specs: ["Two line array speakers", "One 18\" subwoofer", "2800W amp @ 8Ω + dedicated sub amp"]
+  },
+  {
+    name: "James Audiophile Concert Series",
+    category: "Concert",
+    coverage: "Audiophile",
+    copy: "Full-range 3-way tower speakers delivering powerful, high-fidelity sound for outdoor experiences.",
+    specs: ["Two 3-way towers, dual 8\" & 6.5\" woofers", "Quad 1\" tweeters per tower", "Two 1500W amplifiers @ 8Ω"]
+  }
+];
+
+const specSheets = [
+  { image: "/projects/catalog-series.webp", label: "Patio, Garden & Landscape Series" },
+  { image: "/projects/catalog-bollard.webp", label: "Landscape & Ambisonic Bollards" },
+  { image: "/projects/catalog-specialty.webp", label: "Specialty, Line Array & Concert" }
+];
+
 export default function Home() {
   return (
     <main>
@@ -148,11 +220,40 @@ export default function Home() {
       </section>
 
       <section id="catalog" className="catalog section">
-        <div className="catalogCard">
-          <p className="eyebrow">Catalog</p>
-          <h2>Explore Smart Living Group services.</h2>
-          <p>Add your PDF as <strong>public/catalog.pdf</strong> and this section will open it directly for clients.</p>
-          <a className="button primary" href="/catalog.pdf">Open Catalog <ArrowRight size={18} /></a>
+        <div className="sectionHeader center">
+          <p className="eyebrow">Outdoor Audio Catalog</p>
+          <h2>Premium speaker systems for every outdoor space.</h2>
+        </div>
+        <div className="catalogGrid">
+          {catalogProducts.map((product) => (
+            <article className="productCard" key={product.name}>
+              <div className="productTop">
+                <span className="productTag">{product.category}</span>
+                <span className="productCoverage"><Waves size={14} />{product.coverage}</span>
+              </div>
+              <h3>{product.name}</h3>
+              <p>{product.copy}</p>
+              <ul className="productSpecs">
+                {product.specs.map((spec) => <li key={spec}><CheckCircle2 size={15} />{spec}</li>)}
+              </ul>
+            </article>
+          ))}
+        </div>
+
+        <div className="specSheets">
+          <p className="eyebrow center">Full Specification Sheets</p>
+          <div className="specSheetGrid">
+            {specSheets.map((sheet) => (
+              <a href={sheet.image} target="_blank" rel="noreferrer" className="specSheet" key={sheet.image}>
+                <img src={sheet.image || "/placeholder.svg"} alt={sheet.label} loading="lazy" />
+                <span>{sheet.label}</span>
+              </a>
+            ))}
+          </div>
+          <div className="catalogActions">
+            <a className="button primary" href="/catalog.pdf">Open Full Catalog PDF <ArrowRight size={18} /></a>
+            <a className="button secondary" href="#contact">Request Pricing</a>
+          </div>
         </div>
       </section>
 
