@@ -151,8 +151,8 @@ export default function Home() {
         <div className="catalogCard">
           <p className="eyebrow">Catalog</p>
           <h2>Explore Smart Living Group services.</h2>
-          <p>Add your PDF as <strong>public/catalog.pdf</strong> and this section will open it directly for clients.</p>
-          <a className="button primary" href="/catalog.pdf">Open Catalog <ArrowRight size={18} /></a>
+          <p>Browse our full catalog to see our premium outdoor audio, lighting, displays and motorized shade solutions.</p>
+          <a className="button primary" href="/catalog.pdf" target="_blank" rel="noreferrer">Open Catalog <ArrowRight size={18} /></a>
         </div>
       </section>
 
