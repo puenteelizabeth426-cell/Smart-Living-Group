@@ -1,0 +1,194 @@
+Create five new SEO service pages for the existing Smart Living Group website.
+
+IMPORTANT:
+- Do not redesign or replace the existing homepage.
+- Do not delete any existing files or sections.
+- Match the current website's luxury black, charcoal, cream, and warm gold visual style.
+- Reuse the existing header, typography, buttons, spacing, and existing images from the public folder.
+- Make every page fully responsive on desktop, tablet, and mobile.
+- Use Next.js App Router with TypeScript.
+- Keep the existing Google Analytics code.
+- Add links back to the homepage and between all service pages.
+- Use the official domain https://smartliving-texas.com
+- Business phone: 817-510-3103
+- Business email: smartlivingroup@gmail.com
+- Service area: Dallas–Fort Worth, Texas.
+- Every page must include its own Metadata object, canonical URL, Open Graph information, clear H1, helpful service content, call-to-action buttons, FAQ section and JSON-LD structured data.
+- Do not invent a street address, prices, certifications, awards, guarantees, customer reviews, or years of experience.
+- Use natural professional English and do not overuse keywords.
+
+Create a reusable component at:
+
+app/_components/service-page.tsx
+
+The reusable component should support:
+- serviceName
+- eyebrow
+- headline
+- introduction
+- heroImage
+- benefits
+- process steps
+- service areas
+- FAQ questions and answers
+- related service links
+- JSON-LD Service schema and FAQPage schema
+- Call Now button linking to tel:+18175103103
+- Request Consultation button linking to mailto:smartlivingroup@gmail.com
+- A Back to Home link
+- Header navigation linking to Home, Services, Gallery, Catalog and Contact
+- Footer with Smart Living Group, Dallas–Fort Worth, phone and email
+
+Then create these five public routes:
+
+1. app/outdoor-audio-dallas/page.tsx
+
+Metadata:
+Title: Outdoor Audio Installation Dallas | Smart Living Group
+Description: Professional outdoor audio system design and installation for patios, pools and luxury outdoor spaces throughout Dallas–Fort Worth.
+Canonical: /outdoor-audio-dallas
+
+H1:
+Outdoor Audio Installation in Dallas–Fort Worth
+
+Content topics:
+- Weather-conscious outdoor speaker placement
+- Patio, pool and landscape audio
+- Even sound coverage
+- Hidden wiring and clean installation
+- Phone and smart-control integration
+- Design based on property layout
+- Residential outdoor entertainment spaces
+
+FAQ:
+- Can outdoor speakers remain installed year-round?
+- Can the audio system be controlled from a phone?
+- Can speakers be installed around a pool or patio?
+- Do you conceal the speaker wiring?
+
+2. app/landscape-lighting-dallas/page.tsx
+
+Metadata:
+Title: Landscape Lighting Dallas | Smart Living Group
+Description: Custom landscape lighting design and professional installation for homes and outdoor living spaces across Dallas–Fort Worth.
+Canonical: /landscape-lighting-dallas
+
+H1:
+Landscape Lighting Design and Installation in Dallas
+
+Content topics:
+- Architectural lighting
+- Pathway and entry lighting
+- Tree and garden lighting
+- Patio and outdoor kitchen lighting
+- Accent and security-conscious lighting
+- Low-voltage outdoor lighting
+- Thoughtful fixture placement
+- Nighttime atmosphere and visibility
+
+FAQ:
+- What areas of a property can be illuminated?
+- Is low-voltage lighting suitable for outdoor use?
+- Can lighting be added to an existing landscape?
+- Can outdoor lighting be automated?
+
+3. app/outdoor-tv-installation-dallas/page.tsx
+
+Metadata:
+Title: Outdoor TV Installation Dallas | Smart Living Group
+Description: Professional outdoor TV installation for covered patios, pools and luxury outdoor entertainment areas in Dallas–Fort Worth.
+Canonical: /outdoor-tv-installation-dallas
+
+H1:
+Outdoor TV Installation in Dallas–Fort Worth
+
+Content topics:
+- Outdoor-rated television installation
+- Covered patio and pool-area placement
+- Viewing-angle planning
+- Glare and sunlight considerations
+- Concealed wiring
+- Audio system integration
+- Streaming and control setup
+- Clean professional mounting
+
+FAQ:
+- Can a regular indoor television be installed outside?
+- How do you select the best TV location?
+- Can the wiring be concealed?
+- Can the outdoor television connect to outdoor speakers?
+
+4. app/motorized-shades-dallas/page.tsx
+
+Metadata:
+Title: Motorized Shades Dallas | Smart Living Group
+Description: Custom motorized shade solutions for patios, outdoor living spaces and luxury homes throughout Dallas–Fort Worth.
+Canonical: /motorized-shades-dallas
+
+H1:
+Motorized Shades for Dallas–Fort Worth Homes
+
+Content topics:
+- Patio and outdoor living shades
+- Sun and glare management
+- Privacy and comfort
+- Motorized operation
+- Remote and phone control
+- Smart-home integration
+- Clean custom installation
+- Solutions selected for each opening
+
+FAQ:
+- Can motorized shades be controlled from a phone?
+- Are motorized shades suitable for patios?
+- Can shades integrate with an existing smart-home system?
+- Do you help select the appropriate shade solution?
+
+5. app/smart-home-automation-dallas/page.tsx
+
+Metadata:
+Title: Smart Home Automation Dallas | Smart Living Group
+Description: Smart-home control solutions for lighting, entertainment, shades and outdoor living spaces throughout Dallas–Fort Worth.
+Canonical: /smart-home-automation-dallas
+
+H1:
+Smart Home Automation in Dallas–Fort Worth
+
+Content topics:
+- Centralized control
+- Lighting and shade control
+- Outdoor entertainment control
+- Phone and tablet operation
+- Custom scenes and routines
+- Simple everyday interfaces
+- Integration planning
+- Residential technology design
+
+FAQ:
+- What parts of a home can be automated?
+- Can existing devices be integrated?
+- Can the system be controlled remotely?
+- Can custom scenes be created?
+
+For every page:
+- Include one descriptive H1 only.
+- Use logical H2 and H3 headings.
+- Include at least 600 words of useful, non-repetitive service content.
+- Include a visible Dallas–Fort Worth service-area section.
+- Include internal links to the other four service pages.
+- Include prominent Call Now and Request Consultation calls to action.
+- Add an SEO-friendly image alt attribute.
+- Use an existing appropriate image from the public folder. Do not reference files that do not exist.
+- If there is no unique image for a service, use an existing project image rather than creating a broken path.
+- Make the image selection easy to replace later.
+- Avoid keyword stuffing.
+- Do not claim that Smart Living Group is licensed, insured, certified, number one, or award-winning unless that information already exists in the project.
+- Make sure pnpm build completes without TypeScript or lint errors.
+
+Also update the homepage navigation or Services section so visitors can reach all five new pages, but preserve the existing homepage design.
+
+Create or update:
+- app/sitemap.ts so the sitemap contains the homepage and all five service URLs.
+- app/robots.ts so crawlers are allowed and the sitemap points to https://smartliving-texas.com/sitemap.xml.
+
+After finishing, summarize every file created or changed. Do not deploy or merge anything yet.
