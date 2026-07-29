@@ -1,0 +1,109 @@
+Update the existing Smart Living Group Next.js website.
+
+IMPORTANT:
+- Do not redesign or replace the homepage.
+- Do not delete existing sections, navigation, SEO metadata, Google Analytics, service pages, sitemap, or robots files.
+- Only update the existing catalog area titled “Explore Smart Living Group Services”.
+- Correct any accidental “Explore Small Living Group Services” text to “Explore Smart Living Group Services”.
+- The full catalog must display directly inside the website.
+- Remove every button, link, modal, iframe, or action labeled “Open Full Catalog”, “View Full Catalog”, “Open Catalog”, or anything that opens a separate PDF or catalog page.
+- Visitors must not have to open another page, browser tab, PDF, or external viewer.
+- Keep the main Catalog navigation item, but make it link or scroll directly to the embedded catalog section with id="catalog".
+
+Use all 27 uploaded images from public/catalog in this exact order:
+- /catalog/catalog-01.jpg
+- /catalog/catalog-02.jpg
+- /catalog/catalog-03.jpg
+- /catalog/catalog-04.jpg
+- /catalog/catalog-05.jpg
+- /catalog/catalog-06.jpg
+- /catalog/catalog-07.jpg
+- /catalog/catalog-08.jpg
+- /catalog/catalog-09.jpg
+- /catalog/catalog-10.jpg
+- /catalog/catalog-11.jpg
+- /catalog/catalog-12.jpg
+- /catalog/catalog-13.jpg
+- /catalog/catalog-14.jpg
+- /catalog/catalog-15.jpg
+- /catalog/catalog-16.jpg
+- /catalog/catalog-17.jpg
+- /catalog/catalog-18.jpg
+- /catalog/catalog-19.jpg
+- /catalog/catalog-20.jpg
+- /catalog/catalog-21.jpg
+- /catalog/catalog-22.jpg
+- /catalog/catalog-23.jpg
+- /catalog/catalog-24.jpg
+- /catalog/catalog-25.jpg
+- /catalog/catalog-26.jpg
+- /catalog/catalog-27.jpgReplace the existing empty catalog placeholders with these 27 images. Keep them inside the existing “Explore Smart Living Group Services” section.
+
+Create or update app/catalog-viewer.tsx:
+- Add "use client" at the top.
+- Use Next.js Image.
+- Render all 27 images directly on the page.
+- Responsive layout:
+  - 1 column on mobile
+  - 2 columns on tablet
+  - 3 columns on desktop
+- Preserve each full catalog page without cropping using object-contain.
+- Use the existing luxury dark design.
+- Put every image in an elegant card with rounded corners, subtle border, shadow, and hover lift.
+- Clicking an image opens a full-screen lightbox inside the same website.
+- The lightbox must have:
+  - close button
+  - previous button
+  - next button
+  - image counter
+  - Escape, ArrowLeft, and ArrowRight keyboard controls
+  - background scroll locked while open
+- Do not open a new tab.
+- Do not link to a PDF.
+- Do not add download buttons.
+- Use loading="lazy" except where Next.js optimization handles it automatically.
+- Use sizes attributes for responsive image optimization.
+- Use accessible aria-labels for all controls.
+
+Use these alt descriptions in order:
+1. Motorized outdoor shades service overview
+2. Automated outdoor shades for a luxury patio
+3. Motorized shade installation at a modern pool home
+4. Outdoor landscape step lighting
+5. Outdoor lighting fixture options
+6. Motorized shades for a covered outdoor kitchen
+7. Landscape lighting design examples
+8. Architectural landscape lighting at night
+9. Outdoor televisions for full sun and partial sun
+10. Samsung Terrace outdoor television installation
+11. Smart Living Group logo
+12. Smart Living Group luxury automation overview
+13. Smart Living Group company services
+14. Why clients choose Smart Living Group
+15. Smart Living Group vision
+16. Outdoor audio and outdoor television solutions
+17. Outdoor shades and outdoor lighting solutions
+18. Samsung Terrace outdoor TV on a covered patio
+19. Outdoor TV installation over a stone fireplace
+20. Premium outdoor audio system options
+21. Specialty outdoor speaker installation
+22. Landscape bollard outdoor audio systems
+23. Bollard outdoor speaker in a garden
+24. Patio, garden, and landscape outdoor audio systems
+25. Landscape speaker placement in a modern backyard
+26. Outdoor audio installation for a luxury pool home
+27. Outdoor speaker coverage plan around a swimming pool
+
+Update the existing page or component containing “Explore Smart Living Group Services” so it imports and renders <CatalogViewer /> directly under that heading.
+
+Also:
+- Give the catalog section id="catalog".
+- Make the homepage Catalog navigation link point to "#catalog".
+- Remove the “Open Full Catalog” button completely.
+- Remove unused PDF URLs, iframe code, modal state, catalog-opening functions, and imports related to the removed button.
+- Do not remove the Catalog navigation item.
+- Do not change the homepage design outside this catalog section.
+- Ensure all 27 images are visible.
+- Ensure the project builds without TypeScript or lint errors.
+- Do not deploy, create a PR, or merge yet.
+- At the end, summarize every file created or changed.
