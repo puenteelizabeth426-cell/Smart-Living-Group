@@ -1,4 +1,5 @@
 import { Mail, Phone, ArrowRight, ShieldCheck, Sparkles, Waves, Lightbulb, Tv, Blinds, MapPin, CheckCircle2 } from "lucide-react";
+import { CatalogViewer } from "./catalog-viewer";
 
 const images = Array.from({ length: 18 }, (_, i) => `/projects/project-${String(i + 1).padStart(2, "0")}.webp`);
 
@@ -148,12 +149,12 @@ export default function Home() {
       </section>
 
       <section id="catalog" className="catalog section">
-        <div className="catalogCard">
+        <div className="sectionHeader center">
           <p className="eyebrow">Catalog</p>
           <h2>Explore Smart Living Group services.</h2>
-          <p>Add your PDF as <strong>public/catalog.pdf</strong> and this section will open it directly for clients.</p>
-          <a className="button primary" href="/catalog.pdf">Open Catalog <ArrowRight size={18} /></a>
+          <p className="catalogIntro">Browse our full range of outdoor audio, landscape lighting, outdoor TVs and motorized shade solutions. Tap any page to view it full screen.</p>
         </div>
+        <CatalogViewer />
       </section>
 
       <section className="brands section">
