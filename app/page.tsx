@@ -477,7 +477,7 @@ export default function Home() {
                     ? "We listen, evaluate the property and define the goals for the project."
                     : index === 1
                       ? "We create a clean plan for audio, lighting, displays, shades and control."
-                      :index ===2
+                    : index ===2
                       ? "Our installation focuses on clean detail, reliability and a premium finish."
                       : "We help keep the system simple, updated and ready to use."
                       }
