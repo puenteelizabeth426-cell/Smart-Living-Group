@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { StructuredData } from "./structured-data";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -68,6 +69,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
+      <head>
+        <StructuredData />
+      </head>
       <body>
         {children}
         <GoogleAnalytics gaId="G-G4QW2773CV" />
