@@ -210,3 +210,34 @@ export default function Home() {
     </main>
   );
 }
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Luxury Outdoor Living Dallas | Smart Living Group",
+  description:
+    "Luxury outdoor audio, landscape lighting, outdoor TVs and motorized shades throughout Dallas-Fort Worth.",
+
+  keywords: [
+    "Outdoor Audio Dallas",
+    "Landscape Lighting Dallas",
+    "Luxury Outdoor Living",
+    "Outdoor TV Installation",
+    "Motorized Shades Dallas",
+    "Outdoor Speakers Dallas",
+    "Dallas Smart Home"
+  ],
+};                                                                 import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Outdoor Audio & Landscape Lighting Services Dallas",
+  description:
+    "Professional outdoor audio, landscape lighting, outdoor TVs and motorized shade installation in Dallas-Fort Worth.",
+
+  keywords: [
+    "Outdoor Audio",
+    "Landscape Lighting",
+    "Outdoor TV",
+    "Motorized Shades",
+    "Outdoor Speakers Dallas"
+  ],
+};
