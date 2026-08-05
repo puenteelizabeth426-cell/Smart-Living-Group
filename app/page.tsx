@@ -1,4 +1,4 @@
-import { Mail, Phone, ArrowRight, ShieldCheck, Sparkles, Waves, Lightbulb, Tv, Blinds, MapPin, CheckCircle2 } from "lucide-react";
+import { Mail, Phone, ArrowRight, ShieldCheck, Sparkles, Waves, Lightbulb, Tv, Blinds, MapPin, CheckCircle2, Instagram } from "lucide-react";
 import { CatalogViewer } from "./catalog-viewer";
 
 const images = Array.from({ length: 18 }, (_, i) => `/projects/project-${String(i + 1).padStart(2, "0")}.webp`);
@@ -54,8 +54,24 @@ export default function Home() {
           <a href="#catalog">Catalog</a>
           <a href="#contact">Contact</a>
         </div>
-        <a className="navCta" href="tel:+1XXXXXXXXXX">Call Now</a>
+        <a className="navCta" href="tel:+18175103103">Call Now</a>
       </nav>
+
+      <section id="top" className="splash">
+        <div className="splashOverlay" />
+        <div className="splashInner reveal">
+          <img className="splashLogo" src="/projects/logo.webp" alt="The Smart Living Group logo — The Art of Perfect Living" />
+          <div className="splashContact">
+            <a href="tel:+18175103103" className="splashContactItem">
+              <Phone size={20} /> <span>(817) 510-3103</span>
+            </a>
+            <a href="https://instagram.com/the_smart_living_group" target="_blank" rel="noreferrer" className="splashContactItem">
+              <Instagram size={20} /> <span>@the_smart_living_group</span>
+            </a>
+          </div>
+          <a href="#home" className="splashScroll" aria-label="Scroll to explore">Explore <ArrowRight size={16} /></a>
+        </div>
+      </section>
 
       <section id="home" className="hero">
         <div className="heroMedia">
@@ -188,8 +204,9 @@ export default function Home() {
           <p>Request a consultation for outdoor audio, landscape lighting, outdoor TVs or motorized shades.</p>
         </div>
         <div className="contactActions">
-          <a href="tel:+1XXXXXXXXXX" className="contactButton"><Phone /> Call Smart Living Group</a>
+          <a href="tel:+18175103103" className="contactButton"><Phone /> (817) 510-3103</a>
           <a href="mailto:Smartlivingroup@gmail.com" className="contactButton"><Mail /> Smartlivingroup@gmail.com</a>
+          <a href="https://instagram.com/the_smart_living_group" target="_blank" rel="noreferrer" className="contactButton"><Instagram /> @the_smart_living_group</a>
         </div>
       </section>
 
