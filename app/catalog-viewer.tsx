@@ -3,8 +3,27 @@
 import { useCallback, useEffect, useState } from "react";
 import { ArrowRight, X, ChevronLeft, ChevronRight } from "lucide-react";
 
-const TOTAL_PAGES = 27;
-const pages = Array.from({ length: TOTAL_PAGES }, (_, i) => `/catalog/page-${i + 1}.jpg`);
+const pages = [
+  { src: "/catalog/catalog-01.jpg", alt: "Samsung Terrace outdoor TVs for full sun and partial sun" },
+  { src: "/catalog/catalog-02.jpg", alt: "Automated outdoor shades and landscape lighting solutions" },
+  { src: "/catalog/catalog-03.jpg", alt: "Samsung Terrace outdoor TV on a covered patio" },
+  { src: "/catalog/catalog-04.jpg", alt: "Smart Living Group luxury automation overview" },
+  { src: "/catalog/catalog-05.jpg", alt: "Specialty, line array, and concert series outdoor speakers" },
+  { src: "/catalog/catalog-06.jpg", alt: "Landscape outdoor speaker placement in a modern backyard" },
+  { src: "/catalog/catalog-07.jpg", alt: "Outdoor audio installation for a luxury pool home" },
+  { src: "/catalog/catalog-08.jpg", alt: "Specialty outdoor speaker installation" },
+  { src: "/catalog/catalog-09.jpg", alt: "Outdoor speaker coverage plan around a swimming pool" },
+  { src: "/catalog/catalog-10.jpg", alt: "Why clients choose Smart Living Group" },
+  { src: "/catalog/catalog-11.jpg", alt: "Patio, garden, and landscape outdoor audio systems" },
+  { src: "/catalog/catalog-12.jpg", alt: "Discover outdoor landscape lighting" },
+  { src: "/catalog/catalog-13.jpg", alt: "Bollard outdoor speaker in a garden" },
+  { src: "/catalog/catalog-14.jpg", alt: "Landscape and ambisonic bollard outdoor audio systems" },
+  { src: "/catalog/catalog-15.jpg", alt: "Smart Living Group vision" },
+  { src: "/catalog/catalog-16.jpg", alt: "Outdoor audio and outdoor television solutions" },
+  { src: "/catalog/catalog-17.jpg", alt: "Smart Living Group company services" },
+  { src: "/catalog/catalog-18.jpg", alt: "Smart Living Group logo" },
+];
+const TOTAL_PAGES = pages.length;
 
 export function CatalogViewer() {
   const [active, setActive] = useState<number | null>(null);
@@ -27,15 +46,15 @@ export function CatalogViewer() {
   return (
     <>
       <div className="catalogPages">
-        {pages.map((src, index) => (
+        {pages.map((page, index) => (
           <button
             type="button"
             className="catalogPage"
-            key={src}
+            key={page.src}
             onClick={() => setActive(index)}
-            aria-label={`Open catalog page ${index + 1}`}
+            aria-label={`Open catalog page ${index + 1}: ${page.alt}`}
           >
-            <img src={src || "/placeholder.svg"} alt={`Catalog page ${index + 1}`} loading="lazy" />
+            <img src={page.src || "/placeholder.svg"} alt={page.alt} loading="lazy" />
             <span className="catalogPageNum">{index + 1}</span>
           </button>
         ))}
@@ -67,8 +86,8 @@ export function CatalogViewer() {
           </button>
           <img
             className="lightboxImage"
-            src={pages[active] || "/placeholder.svg"}
-            alt={`Catalog page ${active + 1}`}
+            src={pages[active].src || "/placeholder.svg"}
+            alt={pages[active].alt}
             onClick={(e) => e.stopPropagation()}
           />
           <button
