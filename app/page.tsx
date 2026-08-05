@@ -168,7 +168,7 @@ export default function Home() {
         <div className="sectionHeader center">
           <p className="eyebrow">Catalog</p>
           <h2>Explore Smart Living Group services.</h2>
-          <p className="catalogIntro">Browse our full range of outdoor audio, landscape lighting, outdoor TVs and motorized shade solutions. Tap any page to view it full screen.</p>
+          <p className="catalogIntro">Browse our full range of outdoor audio, landscape lighting, outdoor TVs and motorized shade solutions. Open the book and flip through page by page.</p>
         </div>
         <CatalogViewer />
       </section>
