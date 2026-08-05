@@ -57,27 +57,12 @@ export default function Home() {
         <a className="navCta" href="tel:+18175103103">Call Now</a>
       </nav>
 
-      <section id="top" className="splash">
-        <div className="splashOverlay" />
-        <div className="splashInner reveal">
-          <img className="splashLogo" src="/projects/logo.webp" alt="The Smart Living Group logo — The Art of Perfect Living" />
-          <div className="splashContact">
-            <a href="tel:+18175103103" className="splashContactItem">
-              <Phone size={20} /> <span>(817) 510-3103</span>
-            </a>
-            <a href="https://instagram.com/the_smart_living_group" target="_blank" rel="noreferrer" className="splashContactItem">
-              <Instagram size={20} /> <span>@the_smart_living_group</span>
-            </a>
-          </div>
-          <a href="#home" className="splashScroll" aria-label="Scroll to explore">Explore <ArrowRight size={16} /></a>
-        </div>
-      </section>
-
       <section id="home" className="hero">
         <div className="heroMedia">
           <img src="/projects/project-01.webp" alt="Luxury outdoor kitchen with premium lighting" />
         </div>
         <div className="heroOverlay" />
+        <img className="heroLogo" src="/projects/logo.webp" alt="The Smart Living Group logo — The Art of Perfect Living" />
         <div className="heroContent reveal">
           <p className="eyebrow">Dallas–Fort Worth Luxury Outdoor Technology</p>
           <h1>Luxury Outdoor Living. Perfectly Designed.</h1>
@@ -136,16 +121,23 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="split section">
-        <div className="splitImage"><img src="/projects/project-10.webp" alt="Outdoor lighting project" /></div>
-        <div className="splitContent">
+      <section className="why section">
+        <div className="whyHeader">
           <p className="eyebrow dark">Why Smart Living Group</p>
           <h2>Designed like a luxury finish, installed like infrastructure.</h2>
-          <p>Every detail matters: fixture placement, speaker coverage, wire management, control simplicity and the way the space feels at night.</p>
-          <div className="featureList">
-            <div><ShieldCheck /><strong>Professional Installation</strong><span>Clean, reliable, and built to last.</span></div>
-            <div><Sparkles /><strong>Premium Experience</strong><span>Elegant design without complicated controls.</span></div>
-            <div><MapPin /><strong>DFW Service Area</strong><span>Serving luxury homes across Dallas–Fort Worth.</span></div>
+        </div>
+        <div className="whyRow">
+          <div className="whyCard">
+            <div className="whyIcon"><ShieldCheck size={22} /></div>
+            <div><strong>Professional Installation</strong><span>Clean, reliable, and built to last.</span></div>
+          </div>
+          <div className="whyCard">
+            <div className="whyIcon"><Sparkles size={22} /></div>
+            <div><strong>Premium Experience</strong><span>Elegant design without complicated controls.</span></div>
+          </div>
+          <div className="whyCard">
+            <div className="whyIcon"><MapPin size={22} /></div>
+            <div><strong>DFW Service Area</strong><span>Serving homes and businesses across Dallas–Fort Worth.</span></div>
           </div>
         </div>
       </section>
