@@ -172,7 +172,7 @@ export default function Home() {
       <section id="catalog" className="catalog section">
         <div className="sectionHeader center">
           <p className="eyebrow">Catalog</p>
-          <h2>Explore Smart Living Group services.</h2>
+          <h2>Explore Smart Living Group Services</h2>
           <p className="catalogIntro">Browse our full range of outdoor audio, landscape lighting, outdoor TVs and motorized shade solutions. Tap any page to view it full screen.</p>
         </div>
         <CatalogViewer />
