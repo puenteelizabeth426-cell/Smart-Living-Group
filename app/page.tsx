@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import {
   Mail,
@@ -15,87 +14,6 @@ import {
   Instagram,
 } from "lucide-react";
 import { CatalogViewer } from "./catalog-viewer";
-
-/* =========================================================
-   SEO GENERAL DE LA PÁGINA
-========================================================= */
-
-export const metadata: Metadata = {
-  metadataBase: new URL("https://www.smartliving-texas.com"),
-
-  title: {
-    absolute:
-      "Outdoor Audio & Landscape Lighting Dallas | Smart Living Group",
-  },
-
-  description:
-    "Smart Living Group designs and installs outdoor audio, landscape lighting, outdoor TVs and motorized shades for homes and businesses across Dallas-Fort Worth.",
-
-  keywords: [
-    "outdoor audio Dallas",
-    "landscape lighting Dallas",
-    "outdoor TV installation Dallas",
-    "motorized shades Dallas",
-    "outdoor speakers Dallas",
-    "patio audio Dallas",
-    "luxury outdoor living Dallas",
-    "outdoor entertainment DFW",
-    "landscape lighting Fort Worth",
-    "Smart Living Group",
-  ],
-
-  alternates: {
-    canonical: "https://www.smartliving-texas.com/",
-  },
-
-  authors: [
-    {
-      name: "Smart Living Group",
-      url: "https://www.smartliving-texas.com/",
-    },
-  ],
-
-  creator: "Smart Living Group",
-  publisher: "Smart Living Group",
-
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-      "max-video-preview": -1,
-    },
-  },
-
-  openGraph: {
-    title: "Smart Living Group | Luxury Outdoor Living in Dallas-Fort Worth",
-    description:
-      "Professional outdoor audio, landscape lighting, outdoor TVs and motorized shade solutions across Dallas-Fort Worth.",
-    url: "https://www.smartliving-texas.com/",
-    siteName: "Smart Living Group",
-    images: [
-      {
-        url: "/projects/project-01.webp",
-        width: 1200,
-        height: 630,
-        alt: "Luxury outdoor living project by Smart Living Group in Dallas-Fort Worth",
-      },
-    ],
-    locale: "en_US",
-    type: "website",
-  },
-
-  twitter: {
-    card: "summary_large_image",
-    title: "Smart Living Group | Luxury Outdoor Living in DFW",
-    description:
-      "Outdoor audio, landscape lighting, outdoor TVs and motorized shades in Dallas-Fort Worth.",
-    images: ["/projects/project-01.webp"],
-  },
-};
 
 /* =========================================================
    GALERÍA Y DESCRIPCIONES SEO DE LAS IMÁGENES
@@ -262,105 +180,22 @@ const brands = [
 ];
 
 /* =========================================================
-   DATOS ESTRUCTURADOS PARA GOOGLE
-========================================================= */
-
-const localBusinessSchema = {
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "@id": "https://www.smartliving-texas.com/#business",
-  name: "Smart Living Group",
-  alternateName: "The Smart Living Group",
-  url: "https://www.smartliving-texas.com/",
-  logo: "https://www.smartliving-texas.com/projects/logo.webp",
-  image: "https://www.smartliving-texas.com/projects/project-01.webp",
-  description:
-    "Smart Living Group provides outdoor audio, landscape lighting, outdoor TV installation and motorized shade solutions across Dallas-Fort Worth.",
-  telephone: "+1-817-510-3103",
-  email: "Smartlivingroup@gmail.com",
-  priceRange: "$$-$$$$",
-  areaServed: [
-    {
-      "@type": "City",
-      name: "Dallas",
-    },
-    {
-      "@type": "City",
-      name: "Fort Worth",
-    },
-    {
-      "@type": "AdministrativeArea",
-      name: "Dallas-Fort Worth Metroplex",
-    },
-  ],
-  sameAs: ["https://instagram.com/the_smart_living_group"],
-  knowsAbout: [
-    "Outdoor Audio",
-    "Landscape Lighting",
-    "Outdoor TV Installation",
-    "Motorized Shades",
-    "Outdoor Entertainment",
-  ],
-  hasOfferCatalog: {
-    "@type": "OfferCatalog",
-    name: "Outdoor Living Services",
-    itemListElement: [
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Outdoor Audio Installation",
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Landscape Lighting Installation",
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Outdoor TV Installation",
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Motorized Outdoor Shades",
-        },
-      },
-    ],
-  },
-};
-
-/* =========================================================
    PÁGINA PRINCIPAL
 ========================================================= */
 
 export default function Home() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(localBusinessSchema),
-        }}
-      />
-
       <main>
         <nav className="nav" aria-label="Main navigation">
           <a
             href="#home"
             className="brand"
-            aria-label="Smart Living Group home"
+            aria-label="The Smart Living Group home"
           >
             <Image
               src="/projects/logo.webp"
-              alt="Smart Living Group outdoor technology company logo"
+              alt="The Smart Living Group outdoor technology company logo"
               width={180}
               height={180}
               priority
@@ -377,7 +212,7 @@ export default function Home() {
           <a
             className="navCta"
             href="tel:+18175103103"
-            aria-label="Call Smart Living Group"
+            aria-label="Call The Smart Living Group"
           >
             Call Now
           </a>
@@ -413,7 +248,7 @@ export default function Home() {
             <h1>Luxury Outdoor Living. Perfectly Designed.</h1>
 
             <p className="heroText">
-              Smart Living Group designs and installs outdoor audio,
+              The Smart Living Group designs and installs outdoor audio,
               landscape lighting, outdoor TVs and motorized shades for
               elevated residential and commercial spaces.
             </p>
@@ -513,7 +348,7 @@ export default function Home() {
 
         <section className="why section">
           <div className="whyHeader">
-            <p className="eyebrow dark">Why Smart Living Group</p>
+            <p className="eyebrow dark">Why The Smart Living Group</p>
 
             <h2>
               Designed like a luxury finish, installed like infrastructure.
@@ -591,7 +426,7 @@ export default function Home() {
           <div className="sectionHeader center">
             <p className="eyebrow">Catalog</p>
 
-            <h2>Explore Smart Living Group services.</h2>
+            <h2>Explore The Smart Living Group services.</h2>
 
             <p className="catalogIntro">
               Browse our full range of outdoor audio, landscape lighting,
@@ -661,19 +496,19 @@ export default function Home() {
             <a
               href="tel:+18175103103"
               className="contactButton"
-              aria-label="Call Smart Living Group at 817-510-3103"
+              aria-label="Call The Smart Living Group at 817-510-3103"
             >
               <Phone aria-hidden="true" />
               (817) 510-3103
             </a>
 
             <a
-              href="mailto:Smartlivingroup@gmail.com"
+              href="mailto:smartlivingroup@gmail.com"
               className="contactButton"
-              aria-label="Email Smart Living Group"
+              aria-label="Email The Smart Living Group"
             >
               <Mail aria-hidden="true" />
-              Smartlivingroup@gmail.com
+              smartlivingroup@gmail.com
             </a>
 
             <a
@@ -681,7 +516,7 @@ export default function Home() {
               target="_blank"
               rel="noreferrer"
               className="contactButton"
-              aria-label="Visit Smart Living Group on Instagram"
+              aria-label="Visit The Smart Living Group on Instagram"
             >
               <Instagram aria-hidden="true" />
               @the_smart_living_group
@@ -692,12 +527,12 @@ export default function Home() {
         <footer>
           <Image
             src="/projects/logo.webp"
-            alt="Smart Living Group Dallas-Fort Worth logo"
+            alt="The Smart Living Group Dallas-Fort Worth logo"
             width={240}
             height={240}
           />
 
-          <p>Smart Living Group — a S&amp;L Company</p>
+          <p>The Smart Living Group — a S&amp;L Company</p>
 
           <p>
             Outdoor Audio • Landscape Lighting • Outdoor TVs • Motorized
@@ -707,4 +542,3 @@ export default function Home() {
       </main>
     </>
   );
-}
