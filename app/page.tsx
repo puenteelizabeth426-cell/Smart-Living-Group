@@ -188,25 +188,19 @@ export default function Home() {
     <>
       <main>
         <nav className="nav" aria-label="Main navigation">
-          <div className="brandGroup">
-            <a
-              href="#home"
-              className="brand"
-              aria-label="The Smart Living Group home"
-            >
-              <Image
-                src="/projects/logo.webp"
-                alt="The Smart Living Group outdoor technology company logo"
-                width={180}
-                height={180}
-                priority
-              />
-            </a>
-            <a href="tel:+18175103103" className="brandPhone" aria-label="Call The Smart Living Group at (817) 510-3103">
-              <Phone size={16} aria-hidden="true" />
-              <span>(817) 510-3103</span>
-            </a>
-          </div>
+          <a
+            href="#home"
+            className="brand"
+            aria-label="The Smart Living Group home"
+          >
+            <Image
+              src="/projects/logo.webp"
+              alt="The Smart Living Group outdoor technology company logo"
+              width={180}
+              height={180}
+              priority
+            />
+          </a>
 
           <div className="navLinks">
             <a href="#services">Services</a>
@@ -472,17 +466,15 @@ export default function Home() {
 
                 <h3>{item}</h3>
 
-          <p>
-  {
-    index === 0
-      ? "We listen, evaluate the property and define the goals for the project."
-      : index === 1
-      ? "We create a clean plan for audio, lighting, displays, shades and control."
-      : index === 2
-      ? "Our installation focuses on clean detail, reliability and a premium finish."
-      : "We help keep the system simple, updated and ready to use."
-  }
-</p>
+                <p>
+                  {index === 0
+                    ? "We listen, evaluate the property and define the goals for the project."
+                    : index === 1
+                      ? "We create a clean plan for audio, lighting, displays, shades and control."
+                      : index === 2
+                        ? "Our installation focuses on clean detail, reliability and a premium finish."
+                        : "We help keep the system simple, updated and ready to use."}
+                </p>
               </div>
             ))}
           </div>
