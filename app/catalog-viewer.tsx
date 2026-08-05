@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
-import { ArrowRight, X, ChevronLeft, ChevronRight } from "lucide-react";
+import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
 const pages = [
   { src: "/catalog/catalog-01.jpg", alt: "Samsung Terrace outdoor TVs for full sun and partial sun" },
@@ -22,6 +22,13 @@ const pages = [
   { src: "/catalog/catalog-16.jpg", alt: "Outdoor audio and outdoor television solutions" },
   { src: "/catalog/catalog-17.jpg", alt: "Smart Living Group company services" },
   { src: "/catalog/catalog-18.jpg", alt: "Smart Living Group logo" },
+  { src: "/catalog/catalog-19.jpg", alt: "Outdoor shades on a modern poolside home" },
+  { src: "/catalog/catalog-20.jpg", alt: "Expert outdoor landscape lighting solutions" },
+  { src: "/catalog/catalog-21.jpg", alt: "Path, niche, bullet uplight, and 90 degree marker landscape light fixtures" },
+  { src: "/catalog/catalog-22.jpg", alt: "Automated outdoor shades on a covered patio" },
+  { src: "/catalog/catalog-23.jpg", alt: "Discover outdoor shades on a modern home" },
+  { src: "/catalog/catalog-24.jpg", alt: "Outdoor RGB and landscape lighting on illuminated steps" },
+  { src: "/catalog/catalog-25.jpg", alt: "Outdoor shade services: design, installation, and customer experience" },
 ];
 const TOTAL_PAGES = pages.length;
 
@@ -58,17 +65,6 @@ export function CatalogViewer() {
             <span className="catalogPageNum">{index + 1}</span>
           </button>
         ))}
-      </div>
-
-      <div className="catalogActions">
-        <a
-          className="button secondary"
-          href="https://myfiles.formadoc.com/sharing/273c8e3c"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Open Full Catalog <ArrowRight size={18} />
-        </a>
       </div>
 
       {active !== null && (
