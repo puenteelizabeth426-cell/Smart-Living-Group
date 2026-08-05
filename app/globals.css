@@ -48,23 +48,6 @@ img { max-width: 100%; display: block; }
   text-transform: uppercase;
 }
 
-.heroLogo {
-  position: absolute;
-  z-index: 3;
-  top: 108px;
-  right: 5vw;
-  width: min(30vw, 260px);
-  height: auto;
-  object-fit: contain;
-  border-radius: 16px;
-  border: 1px solid rgba(200,164,93,.35);
-  box-shadow:
-    0 24px 60px rgba(0,0,0,.7),
-    0 0 0 1px rgba(255,255,255,.04) inset,
-    0 0 48px rgba(200,164,93,.12);
-  filter: contrast(1.08) brightness(1.05) saturate(1.02);
-}
-
 .hero {
   min-height: 100vh;
   position: relative;
@@ -222,7 +205,6 @@ footer img { width: 210px; margin: 0 auto 18px; }
   .navCta { display: none; }
   .brand img { width: 132px; max-height: 52px; }
   .hero { padding: 130px 22px 80px; align-items: flex-end; min-height: 92vh; }
-  .heroLogo { top: 88px; right: 22px; width: min(42vw, 168px); }
   .heroCards { position: relative; right: auto; bottom: auto; grid-template-columns: 1fr; margin-top: 38px; }
   .intro, .contact { grid-template-columns: 1fr; }
   .section { padding: 76px 22px; }

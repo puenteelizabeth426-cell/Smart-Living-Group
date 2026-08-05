@@ -62,7 +62,6 @@ export default function Home() {
           <img src="/projects/project-01.webp" alt="Luxury outdoor kitchen with premium lighting" />
         </div>
         <div className="heroOverlay" />
-        <img className="heroLogo" src="/projects/logo.webp" alt="The Smart Living Group logo — The Art of Perfect Living" />
         <div className="heroContent reveal">
           <p className="eyebrow">Dallas–Fort Worth Luxury Outdoor Technology</p>
           <h1>Luxury Outdoor Living. Perfectly Designed.</h1>
