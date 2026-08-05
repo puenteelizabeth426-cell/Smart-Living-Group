@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
-import { X, ChevronLeft, ChevronRight } from "lucide-react";
+import { X, ChevronLeft, ChevronRight, BookOpen } from "lucide-react";
 
 const pages = [
   { src: "/catalog/catalog-18.jpg", alt: "Smart Living Group logo" },
@@ -38,8 +38,8 @@ export function CatalogViewer() {
   const [active, setActive] = useState<number | null>(null);
 
   const close = useCallback(() => setActive(null), []);
-  const next = useCallback(() => setActive((p) => (p === null ? p : (p + 1) % TOTAL_PAGES)), []);
-  const prev = useCallback(() => setActive((p) => (p === null ? p : (p - 1 + TOTAL_PAGES) % TOTAL_PAGES)), []);
+  const next = useCallback(() => setActive((p) => (p === null ? p : Math.min(p + 1, TOTAL_PAGES - 1))), []);
+  const prev = useCallback(() => setActive((p) => (p === null ? p : Math.max(p - 1, 0))), []);
 
   useEffect(() => {
     if (active === null) return;
@@ -54,19 +54,20 @@ export function CatalogViewer() {
 
   return (
     <>
-      <div className="catalogPages">
-        {pages.map((page, index) => (
-          <button
-            type="button"
-            className="catalogPage"
-            key={page.src}
-            onClick={() => setActive(index)}
-            aria-label={`Open catalog page ${index + 1}: ${page.alt}`}
-          >
-            <img src={page.src || "/placeholder.svg"} alt={page.alt} loading="lazy" />
-            <span className="catalogPageNum">{index + 1}</span>
-          </button>
-        ))}
+      <div className="catalogBookWrap">
+        <button
+          type="button"
+          className="catalogBook"
+          onClick={() => setActive(0)}
+          aria-label="Open the Smart Living Group catalog"
+        >
+          <span className="catalogBookSpine" aria-hidden="true" />
+          <img src={pages[0].src || "/placeholder.svg"} alt={`Catalog cover: ${pages[0].alt}`} />
+          <span className="catalogBookHint">
+            <BookOpen size={18} /> Open Catalog
+          </span>
+        </button>
+        <p className="catalogBookMeta">{TOTAL_PAGES} pages</p>
       </div>
 
       {active !== null && (
@@ -79,20 +80,24 @@ export function CatalogViewer() {
             className="lightboxNav prev"
             onClick={(e) => { e.stopPropagation(); prev(); }}
             aria-label="Previous page"
+            disabled={active === 0}
           >
             <ChevronLeft size={28} />
           </button>
-          <img
-            className="lightboxImage"
-            src={pages[active].src || "/placeholder.svg"}
-            alt={pages[active].alt}
-            onClick={(e) => e.stopPropagation()}
-          />
+          <div className="lightboxStage" onClick={(e) => e.stopPropagation()}>
+            <img
+              key={active}
+              className="lightboxImage pageFlip"
+              src={pages[active].src || "/placeholder.svg"}
+              alt={pages[active].alt}
+            />
+          </div>
           <button
             type="button"
             className="lightboxNav next"
             onClick={(e) => { e.stopPropagation(); next(); }}
             aria-label="Next page"
+            disabled={active === TOTAL_PAGES - 1}
           >
             <ChevronRight size={28} />
           </button>
