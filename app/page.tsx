@@ -472,7 +472,7 @@ export default function Home() {
 
                 <h3>{item}</h3>
 
-           <p>
+             <p>
               {
                 index === 0
                 ? "We listen, evaluate the property and define the goals for the project."
