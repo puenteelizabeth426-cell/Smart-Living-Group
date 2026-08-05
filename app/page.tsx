@@ -479,7 +479,7 @@ export default function Home() {
                       ? "We create a clean plan for audio, lighting, displays, shades and control."
                       :index ===2
                       ? "Our installation focuses on clean detail, reliability and a premium finish."
-  : "We help keep the system simple, updated and ready to use."}
+                      : "We help keep the system simple, updated and ready to use."}
                 </p>
               </div>
             ))}
