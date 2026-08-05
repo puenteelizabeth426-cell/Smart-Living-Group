@@ -172,15 +172,13 @@ h3 { font-size: 30px; letter-spacing: -.03em; }
 .serviceBody li { display: flex; align-items: center; gap: 10px; }
 .serviceBody li svg { color: var(--gold); flex: none; }
 
-.split { display: grid; grid-template-columns: .95fr 1.05fr; gap: 54px; align-items: center; background: var(--bg-soft); }
-.splitImage img { border-radius: 36px; height: 660px; width: 100%; object-fit: cover; box-shadow: 0 40px 90px rgba(0,0,0,.45); }
-.splitContent { max-width: 680px; }
-.splitContent p { color: #c7beae; }
-.featureList { display: grid; gap: 18px; margin-top: 34px; }
-.featureList div { border: 1px solid var(--line); background: var(--card); border-radius: 24px; padding: 22px; display: grid; grid-template-columns: 34px 1fr; column-gap: 14px; }
-.featureList svg { color: var(--gold); }
-.featureList strong { font-size: 18px; }
-.featureList span { color: var(--muted); margin-top: 4px; }
+.why { background: var(--bg-soft); }
+.whyHeader { max-width: 780px; margin-bottom: 36px; }
+.whyRow { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.whyCard { display: flex; align-items: center; gap: 16px; border: 1px solid var(--line); background: var(--card); border-radius: 20px; padding: 22px 24px; }
+.whyIcon { flex: none; display: grid; place-items: center; width: 46px; height: 46px; border-radius: 12px; background: rgba(200,164,93,.12); color: var(--gold); }
+.whyCard strong { display: block; font-size: 17px; }
+.whyCard span { display: block; color: var(--muted); margin-top: 3px; font-size: 14px; line-height: 1.5; }
 
 .gallerySection { background: #f8f4eb; color: #111; }
 .gallery { columns: 3 280px; column-gap: 18px; }
@@ -283,10 +281,9 @@ footer img { width: 210px; margin: 0 auto 18px; }
   .brand img { width: 132px; max-height: 52px; }
   .hero { padding: 130px 22px 80px; align-items: flex-end; min-height: 92vh; }
   .heroCards { position: relative; right: auto; bottom: auto; grid-template-columns: 1fr; margin-top: 38px; }
-  .intro, .split, .contact { grid-template-columns: 1fr; }
+  .intro, .contact { grid-template-columns: 1fr; }
   .section { padding: 76px 22px; }
-  .serviceGrid, .processGrid { grid-template-columns: 1fr; }
-  .splitImage img { height: 460px; }
+  .serviceGrid, .processGrid, .whyRow { grid-template-columns: 1fr; }
   .brandWall { grid-template-columns: repeat(2, 1fr); }
   .catalogCard { padding: 32px; }
   .catalogBook { width: min(80vw, 300px); }
