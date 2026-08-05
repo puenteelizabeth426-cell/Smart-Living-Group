@@ -78,10 +78,16 @@ img { max-width: 100%; display: block; }
   max-width: 900px;
 }
 .splashLogo {
-  width: min(78vw, 640px);
-  max-height: 60vh;
+  width: min(64vw, 520px);
+  max-height: 52vh;
   object-fit: contain;
-  filter: drop-shadow(0 24px 60px rgba(0,0,0,.6));
+  border-radius: 18px;
+  border: 1px solid rgba(200,164,93,.35);
+  box-shadow:
+    0 30px 80px rgba(0,0,0,.7),
+    0 0 0 1px rgba(255,255,255,.04) inset,
+    0 0 60px rgba(200,164,93,.12);
+  filter: contrast(1.08) brightness(1.05) saturate(1.02);
 }
 .splashTag {
   margin: 0;
