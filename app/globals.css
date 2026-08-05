@@ -48,86 +48,22 @@ img { max-width: 100%; display: block; }
   text-transform: uppercase;
 }
 
-.splash {
-  min-height: 100vh;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  padding: 120px 5vw 80px;
-  background:
-    radial-gradient(120% 90% at 50% 30%, rgba(200,164,93,.10), transparent 60%),
-    linear-gradient(180deg, #0b0b0a 0%, #080807 60%, #050504 100%);
-  text-align: center;
-}
-.splashOverlay {
+.heroLogo {
   position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(60% 50% at 50% 45%, rgba(200,164,93,.08), transparent 70%);
-  pointer-events: none;
-}
-.splashInner {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
-  max-width: 900px;
-}
-.splashLogo {
-  width: min(64vw, 520px);
-  max-height: 52vh;
+  z-index: 3;
+  top: 108px;
+  right: 5vw;
+  width: min(30vw, 260px);
+  height: auto;
   object-fit: contain;
-  border-radius: 18px;
+  border-radius: 16px;
   border: 1px solid rgba(200,164,93,.35);
   box-shadow:
-    0 30px 80px rgba(0,0,0,.7),
+    0 24px 60px rgba(0,0,0,.7),
     0 0 0 1px rgba(255,255,255,.04) inset,
-    0 0 60px rgba(200,164,93,.12);
+    0 0 48px rgba(200,164,93,.12);
   filter: contrast(1.08) brightness(1.05) saturate(1.02);
 }
-.splashTag {
-  margin: 0;
-  color: var(--gold-soft);
-  text-transform: uppercase;
-  letter-spacing: .42em;
-  font-size: clamp(12px, 1.6vw, 16px);
-  font-weight: 600;
-}
-.splashContact {
-  display: flex;
-  gap: 18px 40px;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 4px;
-}
-.splashContactItem {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  font-size: clamp(17px, 2vw, 22px);
-  letter-spacing: .02em;
-  color: var(--text);
-  padding-bottom: 4px;
-  border-bottom: 1px solid transparent;
-  transition: color .25s ease, border-color .25s ease;
-}
-.splashContactItem svg { color: var(--gold); }
-.splashContactItem:hover { color: var(--gold-soft); border-color: rgba(200,164,93,.5); }
-.splashScroll {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  margin-top: 16px;
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: .24em;
-  color: var(--muted);
-}
-.splashScroll:hover { color: var(--gold-soft); }
 
 .hero {
   min-height: 100vh;
@@ -286,6 +222,7 @@ footer img { width: 210px; margin: 0 auto 18px; }
   .navCta { display: none; }
   .brand img { width: 132px; max-height: 52px; }
   .hero { padding: 130px 22px 80px; align-items: flex-end; min-height: 92vh; }
+  .heroLogo { top: 88px; right: 22px; width: min(42vw, 168px); }
   .heroCards { position: relative; right: auto; bottom: auto; grid-template-columns: 1fr; margin-top: 38px; }
   .intro, .contact { grid-template-columns: 1fr; }
   .section { padding: 76px 22px; }

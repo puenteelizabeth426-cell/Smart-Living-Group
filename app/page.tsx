@@ -57,27 +57,12 @@ export default function Home() {
         <a className="navCta" href="tel:+18175103103">Call Now</a>
       </nav>
 
-      <section id="top" className="splash">
-        <div className="splashOverlay" />
-        <div className="splashInner reveal">
-          <img className="splashLogo" src="/projects/logo.webp" alt="The Smart Living Group logo — The Art of Perfect Living" />
-          <div className="splashContact">
-            <a href="tel:+18175103103" className="splashContactItem">
-              <Phone size={20} /> <span>(817) 510-3103</span>
-            </a>
-            <a href="https://instagram.com/the_smart_living_group" target="_blank" rel="noreferrer" className="splashContactItem">
-              <Instagram size={20} /> <span>@the_smart_living_group</span>
-            </a>
-          </div>
-          <a href="#home" className="splashScroll" aria-label="Scroll to explore">Explore <ArrowRight size={16} /></a>
-        </div>
-      </section>
-
       <section id="home" className="hero">
         <div className="heroMedia">
           <img src="/projects/project-01.webp" alt="Luxury outdoor kitchen with premium lighting" />
         </div>
         <div className="heroOverlay" />
+        <img className="heroLogo" src="/projects/logo.webp" alt="The Smart Living Group logo — The Art of Perfect Living" />
         <div className="heroContent reveal">
           <p className="eyebrow">Dallas–Fort Worth Luxury Outdoor Technology</p>
           <h1>Luxury Outdoor Living. Perfectly Designed.</h1>
