@@ -1,6 +1,27 @@
 import { Mail, Phone, ArrowRight, ShieldCheck, Sparkles, Waves, Lightbulb, Tv, Blinds, MapPin, CheckCircle2 } from "lucide-react";
 import { CatalogViewer } from "./catalog-viewer";
 
+const galleryAlts = [
+  "Outdoor kitchen and lounge with pergola lighting and fire pit at night",
+  "Waterfront dock walkway with landscape lighting and palm trees at dusk",
+  "Illuminated exterior staircase to a coastal luxury home with lit pool",
+  "Modern home entry with stone facade and landscape lighting at sunset",
+  "Pathway lighting guiding between luxury homes at night",
+  "Contemporary single-story home with warm exterior lighting at dusk",
+  "In-ground well light illuminating garden plants at night",
+  "Stone retaining wall with landscape lighting and mature plantings",
+  "Bronze outdoor landscape speaker set beside a stone garden wall",
+  "Garden stone steps with tiki torch and path lighting at dusk",
+  "Bronze path light illuminating ornamental grasses along a walkway",
+  "Adjustable bronze spotlight fixture mounted on a stone wall",
+  "Illuminated cedar pergola with stone planters lit at night",
+  "Covered patio with outdoor audio speakers shown as sound waves at dusk",
+  "Backyard putting green with palm trees and landscape lighting at night",
+  "Luxury home driveway with uplit palm trees and path lighting at night",
+  "Coastal luxury home with putting green and exterior lighting at dusk",
+  "Hillside luxury home with an illuminated mosaic-tile pool at night",
+];
+
 const images = Array.from({ length: 18 }, (_, i) => `/projects/project-${String(i + 1).padStart(2, "0")}.webp`);
 
 const services = [
@@ -59,7 +80,7 @@ export default function Home() {
 
       <section id="home" className="hero">
         <div className="heroMedia">
-          <img src="/projects/project-01.webp" alt="Luxury outdoor kitchen with premium lighting" />
+          <img src="/projects/project-01.webp" alt="Luxury outdoor kitchen and lounge with premium landscape lighting in Dallas–Fort Worth" fetchPriority="high" decoding="async" />
         </div>
         <div className="heroOverlay" />
         <div className="heroContent reveal">
@@ -104,7 +125,7 @@ export default function Home() {
             const Icon = service.icon;
             return (
               <article className="serviceCard" key={service.title}>
-                <div className="serviceImage"><img src={service.image} alt={service.title} /></div>
+                <div className="serviceImage"><img src={service.image} alt={`${service.title} by Smart Living Group in Dallas–Fort Worth`} loading="lazy" decoding="async" /></div>
                 <div className="serviceBody">
                   <div className="serviceIcon"><Icon size={22} /></div>
                   <p className="eyebrow dark">{service.eyebrow}</p>
@@ -121,7 +142,7 @@ export default function Home() {
       </section>
 
       <section className="split section">
-        <div className="splitImage"><img src="/projects/project-10.webp" alt="Outdoor lighting project" /></div>
+        <div className="splitImage"><img src="/projects/project-10.webp" alt="Garden stone steps with tiki torch and landscape lighting installed by Smart Living Group" loading="lazy" decoding="async" /></div>
         <div className="splitContent">
           <p className="eyebrow dark">Why Smart Living Group</p>
           <h2>Designed like a luxury finish, installed like infrastructure.</h2>
@@ -142,7 +163,7 @@ export default function Home() {
         <div className="gallery">
           {images.map((src, index) => (
             <a href={src} className="galleryItem" key={src} target="_blank" rel="noreferrer">
-              <img src={src} alt={`Smart Living Group project ${index + 1}`} loading="lazy" />
+              <img src={src} alt={galleryAlts[index] ?? `Smart Living Group outdoor living project ${index + 1}`} loading="lazy" decoding="async" />
             </a>
           ))}
         </div>
