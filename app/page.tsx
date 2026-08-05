@@ -210,3 +210,93 @@ export default function Home() {
     </main>
   );
 }
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Luxury Outdoor Living Dallas | Smart Living Group",
+  description:
+    "Luxury outdoor audio, landscape lighting, outdoor TVs and motorized shades throughout Dallas-Fort Worth.",
+
+  keywords: [
+    "Outdoor Audio Dallas",
+    "Landscape Lighting Dallas",
+    "Luxury Outdoor Living",
+    "Outdoor TV Installation",
+    "Motorized Shades Dallas",
+    "Outdoor Speakers Dallas",
+    "Dallas Smart Home"
+  ],
+};                                                                 import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Outdoor Audio & Landscape Lighting Services Dallas",
+  description:
+    "Professional outdoor audio, landscape lighting, outdoor TVs and motorized shade installation in Dallas-Fort Worth.",
+
+  keywords: [
+    "Outdoor Audio",
+    "Landscape Lighting",
+    "Outdoor TV",
+    "Motorized Shades",
+    "Outdoor Speakers Dallas"
+  ],
+};                                                                 import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Outdoor Living Gallery | Smart Living Group Dallas",
+
+  description:
+    "Browse our portfolio of outdoor audio, landscape lighting, outdoor TVs and luxury outdoor living projects across Dallas.",
+
+  keywords: [
+    "Outdoor Lighting Gallery",
+    "Outdoor Audio Gallery",
+    "Luxury Landscape Lighting",
+    "Dallas Projects"
+  ],
+};                                                                  import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Outdoor Living Catalog | Smart Living Group",
+
+  description:
+    "View our complete outdoor audio, lighting, TV and motorized shade catalog.",
+
+  keywords: [
+    "Outdoor Living Catalog",
+    "Outdoor Audio Catalog",
+    "Landscape Lighting Catalog"
+  ],
+};                                                                 import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact Smart Living Group Dallas",
+
+  description:
+    "Schedule your consultation for outdoor audio, landscape lighting and luxury outdoor living throughout Dallas-Fort Worth.",
+
+  keywords: [
+    "Outdoor Audio Dallas",
+    "Landscape Lighting Dallas",
+    "Contact Smart Living Group"
+  ],
+};                                                                 <Image
+src="/images/audio.jpg"
+alt="Luxury outdoor audio installation in Dallas Texas"
+width={1200}
+height={800}
+quality={90}
+priority
+/>                                                                 <Image
+src="/images/lighting.jpg"
+alt="Premium landscape lighting in Dallas Texas"
+width={1200}
+height={800}
+quality={90}
+/>                                                                 <Image
+src="/images/outdoor-tv.jpg"
+alt="Outdoor TV installation in Dallas TX"
+width={1200}
+height={800}
+quality={90}
+/>

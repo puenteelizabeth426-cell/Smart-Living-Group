@@ -139,4 +139,42 @@ export const metadata = {
       "max-video-preview": -1,
     },
   },
+};                                                                   export const metadata = {
+  metadataBase: new URL("https://www.smartliving-texas.com"),
+
+  title: {
+    default: "Smart Living Group | Luxury Outdoor Audio & Landscape Lighting Dallas",
+    template: "%s | Smart Living Group",
+  },
+
+  description:
+    "Luxury outdoor audio, landscape lighting, outdoor TVs, motorized shades and premium outdoor living solutions across Dallas-Fort Worth.",
+
+  keywords: [
+    "Outdoor Audio Dallas",
+    "Landscape Lighting Dallas",
+    "Outdoor TV Installation",
+    "Motorized Shades Dallas",
+    "Luxury Outdoor Living",
+    "Outdoor Speakers",
+    "Landscape Lighting",
+    "Dallas Smart Home",
+    "Outdoor Entertainment",
+    "DFW Outdoor Audio"
+  ],
+
+  openGraph: {
+    title: "Smart Living Group",
+    description:
+      "Luxury outdoor audio and landscape lighting in Dallas-Fort Worth.",
+    url: "https://www.smartliving-texas.com",
+    siteName: "Smart Living Group",
+    locale: "en_US",
+    type: "website",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
