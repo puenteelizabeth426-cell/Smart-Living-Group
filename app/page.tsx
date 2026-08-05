@@ -188,19 +188,25 @@ export default function Home() {
     <>
       <main>
         <nav className="nav" aria-label="Main navigation">
-          <a
-            href="#home"
-            className="brand"
-            aria-label="The Smart Living Group home"
-          >
-            <Image
-              src="/projects/logo.webp"
-              alt="The Smart Living Group outdoor technology company logo"
-              width={180}
-              height={180}
-              priority
-            />
-          </a>
+          <div className="brandGroup">
+            <a
+              href="#home"
+              className="brand"
+              aria-label="The Smart Living Group home"
+            >
+              <Image
+                src="/projects/logo.webp"
+                alt="The Smart Living Group outdoor technology company logo"
+                width={180}
+                height={180}
+                priority
+              />
+            </a>
+            <a href="tel:+18175103103" className="brandPhone" aria-label="Call The Smart Living Group at (817) 510-3103">
+              <Phone size={16} aria-hidden="true" />
+              <span>(817) 510-3103</span>
+            </a>
+          </div>
 
           <div className="navLinks">
             <a href="#services">Services</a>
@@ -542,3 +548,4 @@ export default function Home() {
       </main>
     </>
   );
+}
