@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import {
+  BookOpen,
   ChevronLeft,
   ChevronRight,
   X,
@@ -139,9 +140,7 @@ export function CatalogViewer() {
         return null;
       }
 
-      return currentPage === totalPages - 1
-        ? 0
-        : currentPage + 1;
+      return Math.min(currentPage + 1, totalPages - 1);
     });
   }, []);
 
@@ -151,9 +150,7 @@ export function CatalogViewer() {
         return null;
       }
 
-      return currentPage === 0
-        ? totalPages - 1
-        : currentPage - 1;
+      return Math.max(currentPage - 1, 0);
     });
   }, []);
 
@@ -199,52 +196,93 @@ export function CatalogViewer() {
   return (
     <>
       <div
-        className="catalogGrid"
+        className="catalogBookWrap"
         aria-label="The Smart Living Group service catalog"
         style={{
-          display: "grid",
-          gridTemplateColumns:
-            "repeat(auto-fit, minmax(260px, 1fr))",
-          gap: "24px",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          gap: "18px",
           width: "100%",
-          marginTop: "40px",
+          marginTop: "44px",
         }}
       >
-        {pages.map((page, index) => (
-          <button
-            key={page.src}
-            type="button"
-            className="catalogCard"
-            onClick={() => setActivePage(index)}
-            aria-label={`Enlarge catalog page ${index + 1}: ${page.alt}`}
+        <button
+          type="button"
+          className="catalogBook"
+          onClick={() => setActivePage(0)}
+          aria-label={`Open The Smart Living Group catalog, ${totalPages} pages`}
+          style={{
+            position: "relative",
+            display: "block",
+            width: "min(90vw, 360px)",
+            aspectRatio: "8.5 / 11",
+            padding: "0",
+            overflow: "hidden",
+            borderRadius: "6px 16px 16px 6px",
+            border: "1px solid rgba(255, 255, 255, 0.14)",
+            background: "rgba(255, 255, 255, 0.04)",
+            boxShadow:
+              "0 30px 70px rgba(0, 0, 0, 0.5), inset 22px 0 34px -22px rgba(0,0,0,0.85)",
+            cursor: "pointer",
+          }}
+        >
+          <Image
+            src={pages[0].src}
+            alt={`Catalog cover: ${pages[0].alt}`}
+            fill
+            priority
+            sizes="(max-width: 640px) 90vw, 360px"
+            style={{ objectFit: "contain" }}
+          />
+          <span
+            aria-hidden="true"
             style={{
-              position: "relative",
-              display: "block",
-              width: "100%",
-              aspectRatio: "8.5 / 11",
-              padding: "0",
-              overflow: "hidden",
-              borderRadius: "20px",
-              border:
-                "1px solid rgba(255, 255, 255, 0.14)",
+              position: "absolute",
+              top: 0,
+              bottom: 0,
+              left: 0,
+              width: "14px",
               background:
-                "rgba(255, 255, 255, 0.04)",
-              boxShadow:
-                "0 18px 45px rgba(0, 0, 0, 0.25)",
-              cursor: "pointer",
+                "linear-gradient(90deg, rgba(0,0,0,0.55), rgba(0,0,0,0.12) 60%, transparent)",
+              borderRight: "1px solid rgba(255,255,255,0.07)",
+            }}
+          />
+          <span
+            className="catalogBookHint"
+            style={{
+              position: "absolute",
+              left: "50%",
+              bottom: "18px",
+              transform: "translateX(-50%)",
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "8px",
+              padding: "10px 18px",
+              borderRadius: "999px",
+              background: "rgba(0, 0, 0, 0.62)",
+              backdropFilter: "blur(6px)",
+              color: "white",
+              fontSize: "13px",
+              fontWeight: 700,
+              letterSpacing: "0.04em",
+              whiteSpace: "nowrap",
             }}
           >
-            <Image
-              src={page.src}
-              alt={page.alt}
-              fill
-              sizes="(max-width: 640px) 100vw, (max-width: 1100px) 50vw, 33vw"
-              style={{
-                objectFit: "contain",
-              }}
-            />
-          </button>
-        ))}
+            <BookOpen size={18} aria-hidden="true" /> Open Catalog
+          </span>
+        </button>
+        <p
+          style={{
+            margin: 0,
+            color: "rgba(255,255,255,0.55)",
+            fontSize: "13px",
+            letterSpacing: "0.14em",
+            textTransform: "uppercase",
+          }}
+        >
+          {totalPages} pages
+        </p>
       </div>
 
       {activePage !== null && (
@@ -304,6 +342,7 @@ export function CatalogViewer() {
               event.stopPropagation();
               showPreviousPage();
             }}
+            disabled={activePage === 0}
             aria-label="View previous catalog page"
             style={{
               position: "fixed",
@@ -320,7 +359,11 @@ export function CatalogViewer() {
               background:
                 "rgba(255, 255, 255, 0.14)",
               color: "white",
-              cursor: "pointer",
+              cursor:
+                activePage === 0
+                  ? "default"
+                  : "pointer",
+              opacity: activePage === 0 ? 0.3 : 1,
             }}
           >
             <ChevronLeft
@@ -360,6 +403,7 @@ export function CatalogViewer() {
               event.stopPropagation();
               showNextPage();
             }}
+            disabled={activePage === totalPages - 1}
             aria-label="View next catalog page"
             style={{
               position: "fixed",
@@ -376,7 +420,14 @@ export function CatalogViewer() {
               background:
                 "rgba(255, 255, 255, 0.14)",
               color: "white",
-              cursor: "pointer",
+              cursor:
+                activePage === totalPages - 1
+                  ? "default"
+                  : "pointer",
+              opacity:
+                activePage === totalPages - 1
+                  ? 0.3
+                  : 1,
             }}
           >
             <ChevronRight
