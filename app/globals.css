@@ -61,6 +61,26 @@ img { max-width: 100%; display: block; }
 .brandPhone:hover { color: #fff; }
 .navLinks { display: flex; gap: 28px; font-size: 13px; text-transform: uppercase; letter-spacing: .14em; color: var(--muted); }
 .navLinks a:hover { color: var(--gold-soft); }
+.navEnd { display: flex; align-items: center; gap: 16px; }
+.navCommercial {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 20px;
+  border-radius: 999px;
+  border: 1px solid var(--gold);
+  background: rgba(200,164,93,.12);
+  color: var(--gold-soft);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  transition: .25s ease;
+}
+.navCommercial:hover {
+  background: linear-gradient(135deg, var(--gold-soft), var(--gold));
+  color: #10100e;
+  transform: translateY(-1px);
+}
 .navCta {
   border: 1px solid rgba(200,164,93,.55);
   padding: 12px 18px;
@@ -235,6 +255,137 @@ h3 { font-size: 30px; letter-spacing: -.03em; }
 footer { padding: 54px 5vw; text-align: center; color: var(--muted); border-top: 1px solid var(--line); }
 footer img { width: 210px; margin: 0 auto 18px; }
 
+/* =========================================================
+   COMMERCIAL & TRADE PAGE
+========================================================= */
+.commHero {
+  position: relative;
+  min-height: 92vh;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  padding: 160px 5vw 96px;
+}
+.commHeroMedia, .commHeroOverlay { position: absolute; inset: 0; }
+.commHeroMedia img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.04); animation: slowZoom 20s ease-in-out infinite alternate; }
+.commHeroOverlay {
+  background:
+    linear-gradient(90deg, rgba(0,0,0,.82) 0%, rgba(0,0,0,.55) 46%, rgba(0,0,0,.2) 100%),
+    linear-gradient(0deg, #080807 2%, transparent 34%);
+}
+.commHeroContent { position: relative; z-index: 2; max-width: 900px; }
+.commHeroText { color: #e6dfd1; font-size: clamp(18px, 2vw, 23px); line-height: 1.6; max-width: 680px; margin: 24px 0 0; }
+
+.commPros { background: #f8f4eb; color: #12110f; }
+.commProsGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+.commProsIntro h2 { margin-bottom: 20px; }
+.commLead { color: #6b6255; line-height: 1.75; font-size: 18px; }
+.commCapabilities {
+  list-style: none;
+  margin: 6px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 20px;
+}
+.commCapabilities li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  color: #37332c;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(0,0,0,.08);
+  font-size: 15px;
+}
+.commCapabilities li svg { color: var(--gold); flex: none; }
+
+.commPartners { background: var(--bg-soft); }
+.commPartnerGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.commPartnerCard {
+  border: 1px solid var(--line);
+  background: var(--card);
+  border-radius: 24px;
+  padding: 34px 30px;
+  transition: .3s ease;
+}
+.commPartnerCard:hover { transform: translateY(-6px); border-color: rgba(200,164,93,.4); }
+.commPartnerIcon {
+  width: 52px; height: 52px;
+  border-radius: 16px;
+  display: grid; place-items: center;
+  background: rgba(200,164,93,.12);
+  color: var(--gold);
+  margin-bottom: 22px;
+}
+.commPartnerCard h3 { font-size: 24px; margin-bottom: 14px; }
+.commPartnerCard p { color: var(--muted); line-height: 1.65; font-size: 15px; }
+
+.commScale { padding: 0; display: grid; grid-template-columns: 1fr 1fr; background: #12110f; color: var(--text); }
+.commScaleMedia { position: relative; min-height: 560px; }
+.commScaleContent { padding: 110px 5vw; display: flex; flex-direction: column; justify-content: center; }
+.commScaleContent > p { color: #c8beac; line-height: 1.75; font-size: 18px; max-width: 560px; margin: 20px 0 0; }
+.commScaleContent h2 { margin-top: 8px; }
+.commScalePoints { display: grid; grid-template-columns: 1fr 1fr; gap: 26px 32px; margin-top: 44px; }
+.commScaleItem { border-top: 1px solid rgba(200,164,93,.3); padding-top: 16px; }
+.commScaleItem strong { display: block; font-size: 16px; color: var(--gold-soft); letter-spacing: .02em; }
+.commScaleItem span { display: block; color: var(--muted); margin-top: 6px; font-size: 14px; line-height: 1.55; }
+
+.commContact { background: #f2eee5; color: #12110f; display: grid; grid-template-columns: .8fr 1.2fr; gap: 56px; align-items: start; }
+.commContactHeader { position: sticky; top: 120px; }
+.commContactHeader .eyebrow { color: var(--gold); }
+.commContactHeader h2 { margin: 8px 0 20px; }
+.commContactHeader p { color: #6b6255; line-height: 1.75; font-size: 17px; max-width: 420px; }
+.commContactCard {
+  background: #fff;
+  border-radius: 28px;
+  padding: 40px;
+  box-shadow: 0 24px 70px rgba(0,0,0,.1);
+}
+
+.commForm { display: grid; gap: 20px; }
+.commFieldRow { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.commField { display: grid; gap: 8px; }
+.commField > span {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: #7a7161;
+}
+.commField input,
+.commField select,
+.commField textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid rgba(0,0,0,.14);
+  border-radius: 14px;
+  background: #faf8f3;
+  color: #12110f;
+  font: inherit;
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+.commField textarea { resize: vertical; }
+.commField input:focus,
+.commField select:focus,
+.commField textarea:focus {
+  outline: none;
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(200,164,93,.18);
+}
+.commSubmit { justify-content: center; margin-top: 6px; }
+.commFormSuccess {
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  gap: 12px;
+  padding: 30px 10px;
+  color: #12110f;
+}
+.commFormSuccess svg { color: var(--gold); }
+.commFormSuccess h3 { font-size: 30px; }
+.commFormSuccess p { color: #6b6255; line-height: 1.7; max-width: 420px; }
+
 .reveal { animation: reveal 1.1s ease both; }
 @keyframes reveal { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes slowZoom { from { transform: scale(1.03); } to { transform: scale(1.11); } }
@@ -243,6 +394,7 @@ footer img { width: 210px; margin: 0 auto 18px; }
   .nav { height: 76px; }
   .navLinks { display: none; }
   .navCta { display: none; }
+  .navCommercial { padding: 10px 14px; letter-spacing: .08em; font-size: 11px; }
   .brandPhone { display: none; }
   .brandWordmark { font-size: 18px; letter-spacing: .18em; }
   .hero { padding: 130px 22px 80px; align-items: flex-end; min-height: 92vh; }
@@ -254,6 +406,18 @@ footer img { width: 210px; margin: 0 auto 18px; }
   .brandWall { grid-template-columns: repeat(2, 1fr); }
   .catalogCard { padding: 32px; }
   .catalogBook { width: min(80vw, 300px); }
+  .commHero { padding: 130px 22px 64px; min-height: 88vh; }
+  .commProsGrid { grid-template-columns: 1fr; gap: 40px; }
+  .commCapabilities { gap: 12px 18px; }
+  .commPartnerGrid { grid-template-columns: 1fr; }
+  .commScale { grid-template-columns: 1fr; }
+  .commScaleMedia { min-height: 320px; }
+  .commScaleContent { padding: 60px 22px; }
+  .commScalePoints { grid-template-columns: 1fr; }
+  .commContact { grid-template-columns: 1fr; gap: 32px; }
+  .commContactHeader { position: static; }
+  .commContactCard { padding: 26px; }
+  .commFieldRow { grid-template-columns: 1fr; }
   .lightbox { padding: 16px; }
   .lightboxNav.prev { left: 8px; }
   .lightboxNav.next { right: 8px; }

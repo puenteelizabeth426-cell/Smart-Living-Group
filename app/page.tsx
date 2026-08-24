@@ -14,6 +14,7 @@ import {
   Instagram,
 } from "lucide-react";
 import { CatalogViewer } from "./catalog-viewer";
+import { SiteNav } from "./site-nav";
 
 /* =========================================================
    GALERÍA Y DESCRIPCIONES SEO DE LAS IMÁGENES
@@ -187,36 +188,7 @@ export default function Home() {
   return (
     <>
       <main>
-        <nav className="nav" aria-label="Main navigation">
-          <div className="brandGroup">
-            <a
-              href="#home"
-              className="brand"
-              aria-label="The Smart Living Group home"
-            >
-              <span className="brandWordmark">Smart Living</span>
-            </a>
-            <a href="tel:+18175103103" className="brandPhone" aria-label="Call The Smart Living Group at (817) 510-3103">
-              <Phone size={16} aria-hidden="true" />
-              <span>(817) 510-3103</span>
-            </a>
-          </div>
-
-          <div className="navLinks">
-            <a href="#services">Services</a>
-            <a href="#gallery">Gallery</a>
-            <a href="#catalog">Catalog</a>
-            <a href="#contact">Contact</a>
-          </div>
-
-          <a
-            className="navCta"
-            href="tel:+18175103103"
-            aria-label="Call The Smart Living Group"
-          >
-            Call Now
-          </a>
-        </nav>
+        <SiteNav />
 
         <section id="home" className="hero">
           <div className="heroMedia">
