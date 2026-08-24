@@ -14,6 +14,7 @@ import {
   Instagram,
 } from "lucide-react";
 import { CatalogViewer } from "./catalog-viewer";
+import { SiteNav } from "./site-nav";
 
 /* =========================================================
    GALERÍA Y DESCRIPCIONES SEO DE LAS IMÁGENES
@@ -133,9 +134,9 @@ const services = [
     icon: Tv,
     title: "Outdoor TVs",
     eyebrow: "Entertainment outside.",
-    image: "/projects/project-01.webp",
+    image: "/projects/service-outdoor-tv.png",
     imageAlt:
-      "Outdoor TV and entertainment installation for a luxury Dallas patio",
+      "Outdoor-rated television mounted on a stone wall in a luxury covered patio in Dallas",
     copy:
       "Outdoor-rated displays, clean mounting, concealed wiring and simple control for patios, kitchens, pergolas and pool areas.",
     points: [
@@ -148,9 +149,9 @@ const services = [
     icon: Blinds,
     title: "Motorized Shades",
     eyebrow: "Comfort with one touch.",
-    image: "/projects/project-02.webp",
+    image: "/projects/service-motorized-shades.png",
     imageAlt:
-      "Motorized outdoor patio shades installed for privacy and sun control",
+      "Motorized roller shades on a luxury covered terrace providing sun control and privacy",
     copy:
       "Motorized shade systems for privacy, sun control and comfort, integrated with smart scenes and outdoor living spaces.",
     points: [
@@ -187,42 +188,7 @@ export default function Home() {
   return (
     <>
       <main>
-        <nav className="nav" aria-label="Main navigation">
-          <div className="brandGroup">
-            <a
-              href="#home"
-              className="brand"
-              aria-label="The Smart Living Group home"
-            >
-              <Image
-                src="/projects/logo.webp"
-                alt="The Smart Living Group outdoor technology company logo"
-                width={180}
-                height={180}
-                priority
-              />
-            </a>
-            <a href="tel:+18175103103" className="brandPhone" aria-label="Call The Smart Living Group at (817) 510-3103">
-              <Phone size={16} aria-hidden="true" />
-              <span>(817) 510-3103</span>
-            </a>
-          </div>
-
-          <div className="navLinks">
-            <a href="#services">Services</a>
-            <a href="#gallery">Gallery</a>
-            <a href="#catalog">Catalog</a>
-            <a href="#contact">Contact</a>
-          </div>
-
-          <a
-            className="navCta"
-            href="tel:+18175103103"
-            aria-label="Call The Smart Living Group"
-          >
-            Call Now
-          </a>
-        </nav>
+        <SiteNav />
 
         <section id="home" className="hero">
           <div className="heroMedia">
@@ -237,14 +203,6 @@ export default function Home() {
           </div>
 
           <div className="heroOverlay" />
-
-          <Image
-            className="heroLogo"
-            src="/projects/logo.webp"
-            alt="The Smart Living Group, a S and L Company, The Art of Perfect Living"
-            width={420}
-            height={420}
-          />
 
           <div className="heroContent reveal">
             <p className="eyebrow">
@@ -269,6 +227,14 @@ export default function Home() {
                 View Catalog
               </a>
             </div>
+
+            <nav className="heroLinks" aria-label="Explore pages">
+              <a href="#catalog" className="heroLink">Catalog</a>
+              <a href="#products" className="heroLink">Products</a>
+              <a href="#process" className="heroLink">Process</a>
+              <a href="#contact" className="heroLink">Consultation</a>
+              <a href="/commercial-trade" className="heroLink">Commercial &amp; Trade</a>
+            </nav>
           </div>
 
           <div className="heroCards">
@@ -444,7 +410,7 @@ export default function Home() {
           <CatalogViewer />
         </section>
 
-        <section className="brands section">
+        <section id="products" className="brands section">
           <p className="eyebrow dark">Premium Products</p>
 
           <h2>Built around trusted luxury technology brands.</h2>
@@ -456,7 +422,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="process section">
+        <section id="process" className="process section">
           <div className="sectionHeader center">
             <p className="eyebrow dark">Process</p>
 
@@ -509,12 +475,12 @@ export default function Home() {
             </a>
 
             <a
-              href="mailto:smartlivingroup@gmail.com"
+              href="mailto:info@smartliving-texas.com"
               className="contactButton"
               aria-label="Email The Smart Living Group"
             >
               <Mail aria-hidden="true" />
-              smartlivingroup@gmail.com
+              info@smartliving-texas.com
             </a>
 
             <a
