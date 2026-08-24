@@ -204,14 +204,6 @@ export default function Home() {
 
           <div className="heroOverlay" />
 
-          <Image
-            className="heroLogo"
-            src="/projects/logo.webp"
-            alt="The Smart Living Group, a S and L Company, The Art of Perfect Living"
-            width={420}
-            height={420}
-          />
-
           <div className="heroContent reveal">
             <p className="eyebrow">
               Dallas–Fort Worth Luxury Outdoor Technology
@@ -235,6 +227,14 @@ export default function Home() {
                 View Catalog
               </a>
             </div>
+
+            <nav className="heroLinks" aria-label="Explore pages">
+              <a href="#catalog" className="heroLink">Catalog</a>
+              <a href="#products" className="heroLink">Products</a>
+              <a href="#process" className="heroLink">Process</a>
+              <a href="#contact" className="heroLink">Consultation</a>
+              <a href="/commercial-trade" className="heroLink">Commercial &amp; Trade</a>
+            </nav>
           </div>
 
           <div className="heroCards">
