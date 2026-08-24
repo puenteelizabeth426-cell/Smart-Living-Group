@@ -18,10 +18,10 @@ export function SiteNav() {
       </div>
 
       <div className="navLinks">
-        <a href="/#services">Services</a>
-        <a href="/#gallery">Gallery</a>
         <a href="/#catalog">Catalog</a>
-        <a href="/#contact">Contact</a>
+        <a href="/#products">Products</a>
+        <a href="/#process">Process</a>
+        <a href="/#contact">Consultation</a>
       </div>
 
       <div className="navEnd">
