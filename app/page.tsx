@@ -194,13 +194,7 @@ export default function Home() {
               className="brand"
               aria-label="The Smart Living Group home"
             >
-              <Image
-                src="/projects/logo.webp"
-                alt="The Smart Living Group outdoor technology company logo"
-                width={180}
-                height={180}
-                priority
-              />
+              <span className="brandWordmark">Smart Living</span>
             </a>
             <a href="tel:+18175103103" className="brandPhone" aria-label="Call The Smart Living Group at (817) 510-3103">
               <Phone size={16} aria-hidden="true" />
