@@ -122,7 +122,7 @@ const organizationSchema = {
   alternateName: "Smart Living Group",
   url: siteUrl,
   logo: `${siteUrl}/projects/logo.webp`,
-  email: "smartlivingroup@gmail.com",
+  email: "info@smartliving-texas.com",
   telephone: "+1-817-510-3103",
   sameAs: ["https://www.instagram.com/the_smart_living_group"],
 };
@@ -138,7 +138,7 @@ const localBusinessSchema = {
   image: `${siteUrl}/projects/project-01.webp`,
   description:
     "Outdoor audio, landscape lighting, outdoor television installation, motorized shades and smart outdoor living technology for residential and commercial properties across Dallas-Fort Worth.",
-  email: "smartlivingroup@gmail.com",
+  email: "info@smartliving-texas.com",
   telephone: "+1-817-510-3103",
 
   areaServed: [

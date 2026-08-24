@@ -509,12 +509,12 @@ export default function Home() {
             </a>
 
             <a
-              href="mailto:smartlivingroup@gmail.com"
+              href="mailto:info@smartliving-texas.com"
               className="contactButton"
               aria-label="Email The Smart Living Group"
             >
               <Mail aria-hidden="true" />
-              smartlivingroup@gmail.com
+              info@smartliving-texas.com
             </a>
 
             <a
