@@ -108,6 +108,7 @@ img { max-width: 100%; display: block; }
 .hero .eyebrow { color: #a97e35; }
 h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; line-height: .98; margin: 0; }
 h1 { font-size: clamp(54px, 8vw, 112px); letter-spacing: -.06em; max-width: 980px; }
+.hero h1 { font-size: clamp(38px, 5vw, 68px); max-width: 760px; }
 h2 { font-size: clamp(38px, 5vw, 70px); letter-spacing: -.045em; }
 h3 { font-size: 30px; letter-spacing: -.03em; }
 .hero h1 { color: #2c261d; }
@@ -134,7 +135,7 @@ h3 { font-size: 30px; letter-spacing: -.03em; }
   transition: .25s ease;
 }
 .heroLink:hover { background: #2c261d; border-color: #2c261d; color: #f0e9dd; transform: translateY(-2px); }
-.heroCards { position: absolute; bottom: 42px; right: 5vw; z-index: 2; display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; max-width: 760px; }
+.heroCards { margin-top: 30px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; max-width: 640px; }
 .miniCard { padding: 18px; border: 1px solid rgba(44,38,29,.12); background: rgba(255,255,255,.62); backdrop-filter: blur(16px); border-radius: 20px; display: grid; gap: 7px; color: #6b6255; }
 .miniCard svg { color: var(--gold); }
 .miniCard strong { color: #2c261d; font-size: 15px; }
