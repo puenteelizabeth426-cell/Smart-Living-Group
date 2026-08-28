@@ -19,30 +19,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 1,
     },
-    {
-      url: `${baseUrl}/#services`,
+    ...[
+      "/outdoor-lighting-dallas",
+      "/outdoor-audio-dallas",
+      "/outdoor-tv-installation-dallas",
+      "/motorized-shades-dallas",
+    ].map((path) => ({
+      url: `${baseUrl}${path}`,
       lastModified,
-      changeFrequency: "weekly",
+      changeFrequency: "monthly" as const,
       priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/#gallery`,
-      lastModified,
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/#catalog`,
-      lastModified,
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/#contact`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
+    })),
     {
       url: `${baseUrl}/commercial-trade`,
       lastModified,
