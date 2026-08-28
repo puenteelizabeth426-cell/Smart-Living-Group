@@ -235,20 +235,20 @@ export default function Home() {
               <a href="#contact" className="heroLink">Consultation</a>
               <a href="/commercial-trade" className="heroLink">Commercial &amp; Trade</a>
             </nav>
-          </div>
 
-          <div className="heroCards">
-            {[
-              ["Premium Design", "Custom layouts for every property"],
-              ["Clean Installation", "Hidden wiring and luxury finish"],
-              ["Smart Control", "Simple scenes from phone or remote"],
-            ].map(([title, text]) => (
-              <div className="miniCard" key={title}>
-                <Sparkles size={18} aria-hidden="true" />
-                <strong>{title}</strong>
-                <span>{text}</span>
-              </div>
-            ))}
+            <div className="heroCards">
+              {[
+                ["Premium Design", "Custom layouts for every property"],
+                ["Clean Installation", "Hidden wiring and luxury finish"],
+                ["Smart Control", "Simple scenes from phone or remote"],
+              ].map(([title, text]) => (
+                <div className="miniCard" key={title}>
+                  <Sparkles size={18} aria-hidden="true" />
+                  <strong>{title}</strong>
+                  <span>{text}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
