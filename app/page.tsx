@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import {
   Mail,
   Phone,
@@ -15,6 +16,7 @@ import {
 } from "lucide-react";
 import { CatalogViewer } from "./catalog-viewer";
 import { SiteNav } from "./site-nav";
+import { serviceTopics } from "./services-data";
 
 /* =========================================================
    GALERÍA Y DESCRIPCIONES SEO DE LAS IMÁGENES
@@ -339,6 +341,48 @@ export default function Home() {
                 </article>
               );
             })}
+          </div>
+        </section>
+
+        <section id="explore" className="section topics">
+          <div className="sectionHeader center">
+            <p className="eyebrow dark">Explore Services</p>
+
+            <h2>Find the right outdoor living solution.</h2>
+
+            <p className="catalogIntro">
+              Browse our outdoor lighting, audio, entertainment and comfort
+              services across Dallas–Fort Worth. Select a topic to see details.
+            </p>
+          </div>
+
+          <div className="topicGrid">
+            {serviceTopics.map((topic) => (
+              <Link
+                href={`/services/${topic.slug}`}
+                className="topicCard"
+                key={topic.slug}
+                aria-label={`${topic.name} in Dallas–Fort Worth`}
+              >
+                <div className="topicMedia">
+                  <Image
+                    src={topic.image}
+                    alt={topic.imageAlt}
+                    width={800}
+                    height={600}
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
+                </div>
+
+                <div className="topicBody">
+                  <h3>{topic.name}</h3>
+                  <span>
+                    {topic.tagline}
+                    <ArrowRight size={16} aria-hidden="true" />
+                  </span>
+                </div>
+              </Link>
+            ))}
           </div>
         </section>
 
