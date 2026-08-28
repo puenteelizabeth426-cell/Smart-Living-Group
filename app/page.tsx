@@ -255,6 +255,10 @@ export default function Home() {
             </div>
 
             <nav className="heroLinks" aria-label="Explore pages">
+              <a href="/services/outdoor-lighting" className="heroLink">Outdoor Lighting</a>
+              <a href="/services/outdoor-audio" className="heroLink">Outdoor Audio</a>
+              <a href="/services/outdoor-tvs" className="heroLink">Outdoor TVs</a>
+              <a href="/services/motorized-shades" className="heroLink">Motorized Shades</a>
               <a href="#catalog" className="heroLink">Catalog</a>
               <a href="#products" className="heroLink">Products</a>
               <a href="#process" className="heroLink">Process</a>

@@ -31,18 +31,19 @@ img { max-width: 100%; display: block; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 5vw;
+  gap: 16px;
+  padding: 0 3vw;
   background: linear-gradient(to bottom, rgba(0,0,0,.82), rgba(0,0,0,.25), transparent);
   backdrop-filter: blur(10px);
 }
-.brandGroup { display: flex; align-items: center; gap: 20px; }
+.brandGroup { display: flex; align-items: center; gap: 12px; }
   .brandWordmark {
   display: inline-block;
   color: var(--gold-soft);
-  font-size: 22px;
+  font-size: 19px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: .22em;
+  letter-spacing: .16em;
   white-space: nowrap;
   }
 .brandPhone {
@@ -72,18 +73,18 @@ img { max-width: 100%; display: block; }
   transition: .25s ease;
 }
 .navLinks a:hover { background: linear-gradient(135deg, var(--gold-soft), var(--gold)); color: #10100e; transform: translateY(-1px); }
-.navEnd { display: flex; align-items: center; gap: 16px; }
+.navEnd { display: flex; align-items: center; gap: 10px; }
 .navCommercial {
   display: inline-flex;
   align-items: center;
-  padding: 12px 20px;
+  padding: 10px 16px;
   border-radius: 999px;
   border: 1px solid var(--gold);
   background: rgba(200,164,93,.12);
   color: var(--gold-soft);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 700;
-  letter-spacing: .14em;
+  letter-spacing: .1em;
   text-transform: uppercase;
   transition: .25s ease;
 }
@@ -94,13 +95,99 @@ img { max-width: 100%; display: block; }
 }
 .navCta {
   border: 1px solid rgba(200,164,93,.55);
-  padding: 12px 18px;
+  padding: 10px 15px;
   border-radius: 999px;
   color: var(--gold-soft);
-  font-size: 13px;
+  font-size: 12px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.navDesktop { display: flex; align-items: center; gap: 10px; }
+.navServices { display: flex; align-items: center; gap: 6px; }
+.navServiceLink {
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 13px;
+  border-radius: 999px;
+  border: 1px solid var(--gold);
+  background: rgba(200,164,93,.12);
+  color: var(--gold-soft);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: .25s ease;
+}
+.navServiceLink:hover {
+  background: linear-gradient(135deg, var(--gold-soft), var(--gold));
+  color: #10100e;
+  transform: translateY(-1px);
+}
+.navServiceLink.active {
+  background: linear-gradient(135deg, var(--gold-soft), var(--gold));
+  color: #10100e;
+  box-shadow: 0 0 0 2px rgba(200,164,93,.35);
+}
+
+.navMobileControls { display: none; align-items: center; gap: 12px; }
+.navToggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  border: 1px solid var(--gold);
+  background: rgba(200,164,93,.12);
+  color: var(--gold-soft);
+  transition: .25s ease;
+}
+.navToggle:hover { background: rgba(200,164,93,.22); }
+
+.mobileMenu {
+  display: none;
+  position: fixed;
+  top: 88px;
+  left: 0;
+  right: 0;
+  z-index: 49;
+  flex-direction: column;
+  gap: 12px;
+  padding: 22px 5vw 30px;
+  background: rgba(8,8,7,.98);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--line);
+}
+.mobileMenu.open { display: flex; }
+.mobileMenuLabel {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+.mobileMenuGroup { display: flex; flex-wrap: wrap; gap: 10px; }
+.mobileMenuGroup a {
+  display: inline-flex;
+  align-items: center;
+  padding: 11px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--gold);
+  background: rgba(200,164,93,.12);
+  color: var(--gold-soft);
+  font-size: 12px;
+  font-weight: 700;
   letter-spacing: .08em;
   text-transform: uppercase;
 }
+.mobileMenuGroup a.active {
+  background: linear-gradient(135deg, var(--gold-soft), var(--gold));
+  color: #10100e;
+}
+.mobileMenuCall { justify-content: center; margin-top: 6px; }
 
 .hero {
   min-height: 100vh;
@@ -493,12 +580,16 @@ footer img { width: 210px; margin: 0 auto 18px; }
 @keyframes reveal { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes slowZoom { from { transform: scale(1.03); } to { transform: scale(1.11); } }
 
+@media (max-width: 1220px) {
+  .navDesktop { display: none; }
+  .navMobileControls { display: flex; }
+}
+
 @media (max-width: 950px) {
   .nav { height: 76px; }
-  .navLinks { display: none; }
-  .navCta { display: none; }
   .navCommercial { padding: 10px 14px; letter-spacing: .08em; font-size: 11px; }
   .brandPhone { display: none; }
+  .mobileMenu { top: 76px; }
   .brandWordmark { font-size: 18px; letter-spacing: .18em; }
   .hero { padding: 130px 22px 80px; align-items: flex-end; min-height: 92vh; }
   .heroCards { position: relative; right: auto; bottom: auto; grid-template-columns: 1fr; margin-top: 38px; }
