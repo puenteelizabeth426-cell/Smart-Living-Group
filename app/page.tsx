@@ -163,10 +163,34 @@ const services = [
 ];
 
 const process = [
-  "Consultation",
-  "Design",
-  "Installation",
-  "Ongoing Support",
+  {
+    title: "Consultation",
+    image: "/projects/process-consultation.png",
+    imageAlt:
+      "Design blueprints and a lighting layout on a tablet during a luxury outdoor project consultation",
+    copy: "We listen, evaluate the property and define the goals for the project.",
+  },
+  {
+    title: "Design",
+    image: "/projects/process-design.png",
+    imageAlt:
+      "Lighting and audio layout drawings with warm material swatches for a luxury outdoor design",
+    copy: "We create a clean plan for audio, lighting, displays, shades and control.",
+  },
+  {
+    title: "Installation",
+    image: "/projects/process-installation.png",
+    imageAlt:
+      "Clean professional installation of a discreet landscape speaker and low-voltage lighting",
+    copy: "Our installation focuses on clean detail, reliability and a premium finish.",
+  },
+  {
+    title: "Ongoing Support",
+    image: "/projects/process-support.png",
+    imageAlt:
+      "Smartphone showing a smart-home control app in a luxury outdoor living space at dusk",
+    copy: "We help keep the system simple, updated and ready to use.",
+  },
 ];
 
 const brands = [
@@ -415,6 +439,16 @@ export default function Home() {
 
           <h2>Built around trusted luxury technology brands.</h2>
 
+          <div className="brandImage">
+            <Image
+              src="/projects/products-showcase.png"
+              alt="Premium outdoor audio, landscape lighting and smart control equipment from luxury technology brands"
+              width={1200}
+              height={800}
+              sizes="(max-width: 768px) 100vw, 70vw"
+            />
+          </div>
+
           <div className="brandWall">
             {brands.map((brand) => (
               <span key={brand}>{brand}</span>
@@ -433,20 +467,22 @@ export default function Home() {
 
           <div className="processGrid">
             {process.map((item, index) => (
-              <div className="processCard" key={item}>
+              <div className="processCard" key={item.title}>
+                <div className="processImage">
+                  <Image
+                    src={item.image}
+                    alt={item.imageAlt}
+                    width={800}
+                    height={600}
+                    sizes="(max-width: 768px) 100vw, 25vw"
+                  />
+                </div>
+
                 <span>{String(index + 1).padStart(2, "0")}</span>
 
-                <h3>{item}</h3>
+                <h3>{item.title}</h3>
 
-                <p>
-                  {index === 0
-                    ? "We listen, evaluate the property and define the goals for the project."
-                    : index === 1
-                      ? "We create a clean plan for audio, lighting, displays, shades and control."
-                      : index === 2
-                        ? "Our installation focuses on clean detail, reliability and a premium finish."
-                        : "We help keep the system simple, updated and ready to use."}
-                </p>
+                <p>{item.copy}</p>
               </div>
             ))}
           </div>

@@ -59,8 +59,19 @@ img { max-width: 100%; display: block; }
 }
 .brandPhone svg { color: var(--gold); }
 .brandPhone:hover { color: #fff; }
-.navLinks { display: flex; gap: 28px; font-size: 13px; text-transform: uppercase; letter-spacing: .14em; color: var(--muted); }
-.navLinks a:hover { color: var(--gold-soft); }
+.navLinks { display: flex; align-items: center; gap: 12px; font-size: 12px; text-transform: uppercase; letter-spacing: .12em; }
+.navLinks a {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: 1px solid var(--gold);
+  background: rgba(200,164,93,.12);
+  color: var(--gold-soft);
+  font-weight: 700;
+  transition: .25s ease;
+}
+.navLinks a:hover { background: linear-gradient(135deg, var(--gold-soft), var(--gold)); color: #10100e; transform: translateY(-1px); }
 .navEnd { display: flex; align-items: center; gap: 16px; }
 .navCommercial {
   display: inline-flex;
@@ -239,15 +250,20 @@ h3 { font-size: 30px; letter-spacing: -.03em; }
 
 .brands { background: #f2eee5; color: #111; text-align: center; }
 .brands h2 { max-width: 850px; margin: 0 auto 36px; }
+.brandImage { max-width: 900px; margin: 0 auto 40px; border-radius: 28px; overflow: hidden; box-shadow: 0 24px 70px rgba(0,0,0,.14); }
+.brandImage img { width: 100%; height: auto; display: block; }
 .brandWall { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
 .brandWall span { padding: 24px 14px; border-radius: 18px; background: white; border: 1px solid rgba(0,0,0,.08); font-weight: 800; color: #383226; letter-spacing: .04em; }
 
 .process { background: #0b0b09; }
 .processGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
-.processCard { padding: 30px; border: 1px solid var(--line); border-radius: 28px; background: var(--card); min-height: 250px; }
-.processCard span { color: var(--gold); font-weight: 900; letter-spacing: .18em; }
-.processCard h3 { margin: 22px 0 12px; }
-.processCard p { color: var(--muted); }
+.processCard { padding: 0; border: 1px solid var(--line); border-radius: 28px; background: var(--card); overflow: hidden; display: flex; flex-direction: column; }
+.processImage { height: 170px; overflow: hidden; }
+.processImage img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
+.processCard:hover .processImage img { transform: scale(1.06); }
+.processCard span { display: block; padding: 26px 28px 0; color: var(--gold); font-weight: 900; letter-spacing: .18em; }
+.processCard h3 { margin: 14px 28px 12px; }
+.processCard p { color: var(--muted); margin: 0 28px 28px; }
 
 .contact { background: linear-gradient(135deg, #12110f, #050504); display: grid; grid-template-columns: 1fr .85fr; gap: 40px; align-items: center; }
 .contact p { color: #c8beac; }
