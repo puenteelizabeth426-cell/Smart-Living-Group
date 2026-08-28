@@ -18,8 +18,11 @@ export function SiteNav() {
       </div>
 
       <div className="navLinks">
+        <a href="/outdoor-lighting-dallas">Lighting</a>
+        <a href="/outdoor-audio-dallas">Audio</a>
+        <a href="/outdoor-tv-installation-dallas">Outdoor TVs</a>
+        <a href="/motorized-shades-dallas">Shades</a>
         <a href="/#catalog">Catalog</a>
-        <a href="/#products">Products</a>
         <a href="/#process">Process</a>
         <a href="/#contact">Consultation</a>
       </div>

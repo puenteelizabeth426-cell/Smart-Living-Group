@@ -1,32 +1,35 @@
-# Smart Living Group Premium Website
+# Smart Living Group — SEO Service Pages Update
 
-Proyecto Next.js listo para subir a GitHub y desplegar en Vercel.
+This package adds four real, indexable service pages to the existing Next.js website:
 
-## Cómo usarlo
+- `/outdoor-lighting-dallas`
+- `/outdoor-audio-dallas`
+- `/outdoor-tv-installation-dallas`
+- `/motorized-shades-dallas`
 
-1. Descomprime este ZIP.
-2. Copia estos archivos dentro de tu repositorio `Smart-Living-Group`, reemplazando los archivos actuales.
-3. Si tienes el catálogo PDF, ponlo en:
-   `public/catalog.pdf`
-4. Cambia el teléfono en `app/page.tsx` donde aparece `+1XXXXXXXXXX`.
-5. Revisa el correo si quieres cambiarlo: `Smartlivingroup@gmail.com`.
-6. Sube a GitHub:
+It also updates the main navigation, homepage internal links and `sitemap.xml`.
 
-```bash
-git add .
-git commit -m "Premium Smart Living redesign"
-git push
-```
+## Upload to GitHub
 
-Vercel debe desplegar automáticamente.
+1. Open the existing Smart Living Group repository in GitHub.
+2. Select **Add file → Upload files**.
+3. Extract this ZIP on your computer.
+4. Drag the contents of the extracted folder into the repository upload screen.
+5. Keep the folder structure exactly as provided and allow GitHub to replace files with the same names.
+6. Commit with the message: `Add SEO service pages`.
+7. Wait for Vercel to finish the automatic deployment.
 
-## Incluye
+Do not delete the existing `public/projects` folder. The new pages intentionally reuse the project images already published on the website.
 
-- Página premium completa
-- Tus imágenes reales optimizadas en WebP
-- Logo nuevo
-- Secciones de Outdoor Audio, Landscape Lighting, Outdoor TVs y Motorized Shades
-- Galería con fotos reales
-- Sección de catálogo
-- SEO básico para Dallas–Fort Worth
-- Diseño responsive para celular
+## After deployment
+
+Open each new URL and confirm it loads. Then submit the following URLs in Google Search Console using **URL Inspection → Request Indexing**:
+
+- `https://www.smartliving-texas.com/outdoor-lighting-dallas`
+- `https://www.smartliving-texas.com/outdoor-audio-dallas`
+- `https://www.smartliving-texas.com/outdoor-tv-installation-dallas`
+- `https://www.smartliving-texas.com/motorized-shades-dallas`
+
+Resubmit `https://www.smartliving-texas.com/sitemap.xml` in Search Console.
+
+Production build verification completed successfully with Next.js 14.2.16.
