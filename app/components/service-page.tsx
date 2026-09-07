@@ -148,7 +148,7 @@ export function ServicePage({ data }: { data: ServicePageData }) {
 
       <footer>
         <Image src="/projects/logo.webp" alt="The Smart Living Group Dallas-Fort Worth logo" width={220} height={220} />
-        <p>The Smart Living Group — a S&amp;L Company</p>
+        <p>The Smart Living Group</p>
         <p>Outdoor Audio • Landscape Lighting • Outdoor TVs • Motorized Shades</p>
       </footer>
 

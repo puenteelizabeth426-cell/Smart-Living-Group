@@ -206,7 +206,7 @@ export default function CommercialTradePage() {
           width={240}
           height={240}
         />
-        <p>The Smart Living Group — a S&amp;L Company</p>
+        <p>The Smart Living Group</p>
         <p>
           Commercial &amp; Trade • Custom Home Builders • Developers • Architects
           &amp; Designers • Hospitality

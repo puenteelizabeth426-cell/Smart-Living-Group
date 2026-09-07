@@ -12,6 +12,7 @@ const serviceLinks = [
 ];
 
 const exploreLinks = [
+  { label: "About", href: "/about" },
   { label: "Catalog", href: "/#catalog" },
   { label: "Products", href: "/#products" },
   { label: "Process", href: "/#process" },
@@ -55,6 +56,14 @@ export function SiteNav() {
         </div>
 
         <div className="navEnd">
+          <a
+            className="navText"
+            href="/about"
+            aria-current={isActive("/about") ? "page" : undefined}
+          >
+            About
+          </a>
+
           <a
             className="navCommercial"
             href="/commercial-trade"
