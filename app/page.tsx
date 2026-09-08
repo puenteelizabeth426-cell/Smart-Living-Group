@@ -105,61 +105,61 @@ const services = [
   {
     icon: Waves,
     title: "Outdoor Audio",
-    eyebrow: "Hidden sound. Luxury feel.",
+    eyebrow: "Sound that blends into the yard",
     image: "/projects/project-09.webp",
     imageAlt:
-      "Hidden landscape speaker installation for luxury outdoor audio in Dallas-Fort Worth",
+      "Landscape speaker concealed in a planting bed for even outdoor audio coverage",
     copy:
-      "Landscape speakers, subwoofers and premium audio zones designed to disappear into the environment while delivering powerful, balanced sound.",
+      "Landscape speakers and buried subwoofers positioned for even coverage, so music sounds balanced across the whole space instead of loud at the source and thin everywhere else.",
     points: [
-      "Landscape speakers",
-      "Pool and patio audio",
-      "Multi-zone control",
+      "Even, low-distortion coverage",
+      "Speakers concealed in planting beds",
+      "Separate zones for patio, pool and garden",
     ],
   },
   {
     icon: Lightbulb,
     title: "Landscape Lighting",
-    eyebrow: "Architecture after dark.",
+    eyebrow: "Architecture after dark",
     image: "/projects/project-03.webp",
     imageAlt:
-      "Professional landscape lighting installation illuminating a luxury home in Dallas",
+      "Landscape lighting grazing stonework and uplighting trees at a residential property",
     copy:
-      "Elegant lighting design for homes, gardens, entries, pathways, trees, stonework, water features and outdoor entertaining spaces.",
+      "Fixtures placed and aimed to graze stone, uplight trees and wash façades — with a warm, consistent color temperature and glare shielded away from where people sit and walk.",
     points: [
-      "Pathway lighting",
-      "Tree and wall accents",
-      "Smart lighting control",
+      "Glare-controlled beam aiming",
+      "Warm, consistent color temperature",
+      "Corrosion-resistant low-voltage fixtures",
     ],
   },
   {
     icon: Tv,
     title: "Outdoor TVs",
-    eyebrow: "Entertainment outside.",
+    eyebrow: "Entertainment that reads in daylight",
     image: "/projects/service-outdoor-tv.png",
     imageAlt:
-      "Outdoor-rated television mounted on a stone wall in a luxury covered patio in Dallas",
+      "Weather-rated television mounted on a stone wall in a covered patio",
     copy:
-      "Outdoor-rated displays, clean mounting, concealed wiring and simple control for patios, kitchens, pergolas and pool areas.",
+      "Weather-rated displays sized to the viewing distance and mounted for daylight visibility, with cabling concealed in the wall and a single remote for the whole setup.",
     points: [
-      "Outdoor-rated TVs",
-      "Concealed wiring",
-      "Simple control systems",
+      "Weather-rated, daylight-visible screens",
+      "Cabling concealed in-wall",
+      "One remote for the whole system",
     ],
   },
   {
     icon: Blinds,
     title: "Motorized Shades",
-    eyebrow: "Comfort with one touch.",
+    eyebrow: "Shade, privacy and cooler evenings",
     image: "/projects/service-motorized-shades.png",
     imageAlt:
-      "Motorized roller shades on a luxury covered terrace providing sun control and privacy",
+      "Motorized roller shades on a covered terrace providing sun control and privacy",
     copy:
-      "Motorized shade systems for privacy, sun control and comfort, integrated with smart scenes and outdoor living spaces.",
+      "Motorized screens that hold off low sun and afternoon heat, close for privacy, and raise or lower on a schedule or alongside the rest of your outdoor scenes.",
     points: [
       "Sun and heat control",
-      "Privacy solutions",
-      "Smart scene integration",
+      "Privacy on demand",
+      "Scheduled and scene-based control",
     ],
   },
 ];
@@ -184,7 +184,7 @@ const process = [
     image: "/projects/process-installation.png",
     imageAlt:
       "Clean professional installation of a discreet landscape speaker and low-voltage lighting",
-    copy: "Our installation focuses on clean detail, reliability and a premium finish.",
+    copy: "Concealed cabling, weather-sealed connections and tidy terminations, installed to protect your landscaping.",
   },
   {
     title: "Ongoing Support",
@@ -232,15 +232,16 @@ export default function Home() {
 
           <div className="heroContent reveal">
             <p className="eyebrow">
-              Dallas–Fort Worth Luxury Outdoor Technology
+              Designed Outdoor Living Systems
             </p>
 
-            <h1>Luxury Outdoor Living. Perfectly Designed.</h1>
+            <h1>Outdoor spaces that feel finished, not wired together.</h1>
 
             <p className="heroText">
               The Smart Living Group designs and installs outdoor audio,
-              landscape lighting, outdoor TVs and motorized shades for
-              elevated residential and commercial spaces.
+              lighting, television and shade systems that read as part of the
+              architecture — discreet, weather-resistant and simple to live
+              with.
             </p>
 
             <div className="heroActions">
@@ -256,9 +257,9 @@ export default function Home() {
 
             <div className="heroCards">
               {[
-                ["Premium Design", "Custom layouts for every property"],
-                ["Clean Installation", "Hidden wiring and luxury finish"],
-                ["Smart Control", "Simple scenes from phone or remote"],
+                ["Designed to the Site", "Placement planned around your architecture and landscape"],
+                ["Clean Installation", "Concealed cabling and weather-sealed connections"],
+                ["Simple Control", "One tap for lighting, sound and shade scenes"],
               ].map(([title, text]) => (
                 <div className="miniCard" key={title}>
                   <Sparkles size={18} aria-hidden="true" />
@@ -281,9 +282,9 @@ export default function Home() {
           </div>
 
           <p>
-            We combine premium products, thoughtful design and professional
-            installation to create outdoor environments that feel finished,
-            intentional and easy to control.
+            We plan the layout, choose equipment suited to the environment and
+            install it carefully, so the finished space feels intentional,
+            holds up outdoors and stays easy to use.
           </p>
         </section>
 
@@ -291,7 +292,7 @@ export default function Home() {
           <div className="sectionHeader">
             <p className="eyebrow dark">Services</p>
 
-            <h2>Premium solutions for luxury outdoor living.</h2>
+            <h2>How each outdoor system is designed and built.</h2>
           </div>
 
           <div className="serviceGrid">
@@ -343,8 +344,9 @@ export default function Home() {
             <h2>Find the right outdoor living solution.</h2>
 
             <p className="catalogIntro">
-              Browse our outdoor lighting, audio, entertainment and comfort
-              services across Dallas–Fort Worth. Select a topic to see details.
+              Explore how we approach lighting, audio, entertainment and shade.
+              Select a service to see how it is planned, installed and lived
+              with.
             </p>
           </div>
 
@@ -354,7 +356,7 @@ export default function Home() {
                 href={`/services/${topic.slug}`}
                 className="topicCard"
                 key={topic.slug}
-                aria-label={`${topic.name} in Dallas–Fort Worth`}
+                aria-label={`Learn about ${topic.name}`}
               >
                 <div className="topicMedia">
                   <Image
@@ -383,7 +385,7 @@ export default function Home() {
             <p className="eyebrow dark">Why The Smart Living Group</p>
 
             <h2>
-              Designed like a luxury finish, installed like infrastructure.
+              Designed like a finish. Installed like infrastructure.
             </h2>
           </div>
 
@@ -395,7 +397,7 @@ export default function Home() {
 
               <div>
                 <strong>Professional Installation</strong>
-                <span>Clean, reliable and built to last.</span>
+                <span>Concealed cabling, weather-sealed and built to last.</span>
               </div>
             </div>
 
@@ -405,8 +407,8 @@ export default function Home() {
               </div>
 
               <div>
-                <strong>Premium Experience</strong>
-                <span>Elegant design without complicated controls.</span>
+                <strong>Considered Detail</strong>
+                <span>Placement, sightlines and cable paths planned in advance.</span>
               </div>
             </div>
 
@@ -471,14 +473,14 @@ export default function Home() {
         </section>
 
         <section id="products" className="brands section">
-          <p className="eyebrow dark">Premium Products</p>
+          <p className="eyebrow dark">Equipment</p>
 
-          <h2>Built around trusted luxury technology brands.</h2>
+          <h2>Built around proven audio, lighting and control brands.</h2>
 
           <div className="brandImage">
             <Image
               src="/projects/products-showcase.png"
-              alt="Premium outdoor audio, landscape lighting and smart control equipment from luxury technology brands"
+              alt="Outdoor audio, landscape lighting and smart control equipment from established technology brands"
               width={1200}
               height={800}
               sizes="(max-width: 768px) 100vw, 70vw"
@@ -528,11 +530,12 @@ export default function Home() {
           <div>
             <p className="eyebrow">Start Your Project</p>
 
-            <h2>Ready to elevate your outdoor space?</h2>
+            <h2>Ready to plan your outdoor space?</h2>
 
             <p>
-              Request a consultation for outdoor audio, landscape lighting,
-              outdoor TVs or motorized shades in Dallas-Fort Worth.
+              Request a consultation and we&apos;ll walk your property, discuss
+              how you use it and outline a clear plan for audio, lighting,
+              television and shade.
             </p>
           </div>
 
@@ -576,7 +579,7 @@ export default function Home() {
             height={240}
           />
 
-          <p>The Smart Living Group — a S&amp;L Company</p>
+          <p>The Smart Living Group</p>
 
           <p>
             Outdoor Audio • Landscape Lighting • Outdoor TVs • Motorized

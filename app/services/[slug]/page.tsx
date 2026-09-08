@@ -110,7 +110,7 @@ export default async function ServicePage({
       <section className="serviceFeatures section">
         <div className="sectionHeader">
           <p className="eyebrow dark">What&apos;s Included</p>
-          <h2>{`${topic.name} in Dallas–Fort Worth.`}</h2>
+          <h2>{`How we approach ${topic.name.toLowerCase()}.`}</h2>
         </div>
 
         <div className="serviceFeatureGrid">
@@ -182,7 +182,7 @@ export default async function ServicePage({
           width={240}
           height={240}
         />
-        <p>The Smart Living Group — a S&amp;L Company</p>
+        <p>The Smart Living Group</p>
         <p>
           Outdoor Audio • Landscape Lighting • Outdoor TVs • Motorized Shades •
           Outdoor Kitchen
