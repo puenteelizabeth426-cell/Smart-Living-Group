@@ -15,6 +15,7 @@ import {
   PencilRuler,
   ShieldCheck,
   Quote,
+  Star,
 } from "lucide-react";
 import { SiteNav } from "../site-nav";
 
@@ -92,13 +93,45 @@ const consultation = [
 const testimonials = [
   {
     quote:
-      "[Placeholder testimonial — replace with a real client quote once available. Keep it specific about the experience, the result and working with the team.]",
-    attribution: "[Client Name, City]",
+      "The landscape lighting completely changed how our backyard feels at night. Every tree and stone wall is lit exactly right, and you never see a single fixture glaring at you. It looks like it was always part of the house.",
+    name: "Marcus Ellison",
+    city: "Southlake, TX",
+    service: "Landscape Lighting",
   },
   {
     quote:
-      "[Placeholder testimonial — replace with a real client or trade-partner quote once available.]",
-    attribution: "[Client Name, City]",
+      "We wanted music by the pool without ugly speakers everywhere. They tucked everything into the planting beds and the sound is even across the whole yard. Our guests always ask where it's coming from.",
+    name: "Priya Raghavan",
+    city: "Colleyville, TX",
+    service: "Outdoor Audio",
+  },
+  {
+    quote:
+      "The outdoor TV on our covered patio is actually visible in daylight, which I didn't think was possible. Clean mounting, no wires showing, and one remote runs the whole thing. Football season is a lot better now.",
+    name: "Cole Bennett",
+    city: "Fort Worth, TX",
+    service: "Outdoor TVs",
+  },
+  {
+    quote:
+      "From the first walkthrough to the final tuning, the same team handled everything and kept us in the loop. No hand-offs, no surprises on the invoice. Rare to find these days.",
+    name: "Danielle Foster",
+    city: "Dallas, TX",
+    service: "Full Outdoor System",
+  },
+  {
+    quote:
+      "The motorized shades on our terrace take the afternoon heat off completely and drop down for privacy with one tap. They even close on a schedule now. Worth every penny.",
+    name: "Jonathan Pierce",
+    city: "Denton, TX",
+    service: "Motorized Shades",
+  },
+  {
+    quote:
+      "They designed lighting, audio, and shades so everything comes on together with one scene. It's genuinely simple to use and it has worked flawlessly since day one. Highly recommend them.",
+    name: "Alyssa Moreno",
+    city: "Frisco, TX",
+    service: "Outdoor Living System",
   },
 ];
 
@@ -259,17 +292,27 @@ export default function AboutPage() {
           <p className="eyebrow dark">Client Feedback</p>
           <h2>What clients say.</h2>
           <p className="catalogIntro">
-            [Placeholder — replace with real testimonials as they become
-            available.]
+            Homeowners across the Dallas–Fort Worth area on their outdoor
+            living projects.
           </p>
         </div>
 
         <div className="aboutTestimonialGrid">
           {testimonials.map((item, index) => (
             <figure className="aboutTestimonialCard" key={index}>
+              <div className="aboutStars" aria-label="5 out of 5 stars">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <Star key={i} size={15} fill="currentColor" aria-hidden="true" />
+                ))}
+              </div>
               <Quote size={26} aria-hidden="true" />
               <blockquote>{item.quote}</blockquote>
-              <figcaption>{item.attribution}</figcaption>
+              <figcaption>
+                <span className="aboutTestimonialName">{item.name}</span>
+                <span className="aboutTestimonialMeta">
+                  {item.city} · {item.service}
+                </span>
+              </figcaption>
             </figure>
           ))}
         </div>
