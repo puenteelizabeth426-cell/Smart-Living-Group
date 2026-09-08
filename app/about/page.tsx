@@ -89,24 +89,6 @@ const consultation = [
   },
 ];
 
-const team = [
-  {
-    name: "[Founder Name]",
-    role: "[Founder / Owner]",
-    copy: "[Placeholder — add the founder's background, years in outdoor technology and design, and what drives their approach to the work.]",
-  },
-  {
-    name: "[Team Member]",
-    role: "[Design / Project Lead]",
-    copy: "[Placeholder — add this team member's role, experience and the part of the process they lead.]",
-  },
-  {
-    name: "[Team Member]",
-    role: "[Lead Installer]",
-    copy: "[Placeholder — add this team member's role, experience and craftsmanship focus.]",
-  },
-];
-
 const testimonials = [
   {
     quote:
@@ -172,11 +154,12 @@ export default function AboutPage() {
             designed around the property first, so the result looks
             intentional and works the way you expect.
           </p>
-          <p className="aboutPlaceholder">
-            [Founder story placeholder — add how and why the company started,
-            the founder&apos;s background in outdoor technology and design, and
-            the philosophy behind the work. Do not state a specific number of
-            years or credentials until confirmed.]
+          <p>
+            We are a design-led outdoor technology company serving the
+            Dallas–Fort Worth area. Our focus is narrow on purpose: outdoor
+            audio, lighting, television and shade, done well, rather than a
+            little of everything. That focus lets us plan each system carefully
+            and hold a high standard on every install.
           </p>
         </div>
 
@@ -242,41 +225,31 @@ export default function AboutPage() {
 
       <section className="aboutTeam section">
         <div className="sectionHeader">
-          <p className="eyebrow dark">The Team</p>
-          <h2>The people behind the work.</h2>
-          <p className="catalogIntro">
-            [Placeholder — replace the portraits and bios below with real team
-            photographs and backgrounds. Nothing here is fabricated.]
+          <p className="eyebrow dark">Who We Are</p>
+          <h2>A small team that treats every project as its own.</h2>
+        </div>
+
+        <div className="aboutWhoGrid">
+          <p>
+            We are a group of designers and installers who care about the
+            details most people never notice — where a speaker sits so the
+            sound feels even, how a fixture is aimed so it flatters the
+            architecture instead of blinding you, and how cabling is routed so
+            nothing is left exposed. Those choices are what separate a finished
+            outdoor space from a collection of gadgets.
           </p>
-        </div>
-
-        <div className="aboutTeamGrid">
-          {team.map((member, index) => (
-            <article className="aboutTeamCard" key={index}>
-              <div className="aboutTeamPhoto">
-                <Image
-                  src="/projects/about-portrait-placeholder.png"
-                  alt="Placeholder portrait to be replaced with a real team photograph"
-                  width={600}
-                  height={720}
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                />
-                <span className="aboutTeamBadge">Photo placeholder</span>
-              </div>
-              <h3>{member.name}</h3>
-              <p className="aboutTeamRole">{member.role}</p>
-              <p>{member.copy}</p>
-            </article>
-          ))}
-        </div>
-
-        <div className="aboutCreds">
-          <p className="eyebrow dark">Experience &amp; Credentials</p>
-          <p className="aboutPlaceholder">
-            [Placeholder — list real credentials, manufacturer certifications,
-            trade affiliations and relevant experience here once confirmed.
-            Avoid claiming certifications or years of experience until they can
-            be verified.]
+          <p>
+            We keep our workload deliberate so the same people who plan your
+            project are the ones who see it through. You will not be handed off
+            between departments or left guessing about the next step. From the
+            first walkthrough to the final tuning, you work with a team that
+            knows your space and stands behind the result.
+          </p>
+          <p>
+            Above all, we want the technology to feel effortless. When the
+            lighting, sound and shade come on with a single tap and simply work
+            night after night, we have done our job — and we stay available
+            afterward to keep it that way.
           </p>
         </div>
       </section>
