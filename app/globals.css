@@ -285,12 +285,24 @@ h3 { font-size: 30px; letter-spacing: -.03em; }
   background: #000;
 }
 .showcaseItem figcaption {
-  padding: 18px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 20px 22px 24px;
+  background: linear-gradient(0deg, rgba(200,164,93,.06), transparent);
+}
+.showcaseItem .showcaseTitle {
   color: var(--gold-soft);
   font-size: 14px;
   font-weight: 700;
   letter-spacing: .04em;
-  background: linear-gradient(0deg, rgba(200,164,93,.06), transparent);
+}
+.showcaseItem .showcaseDescription {
+  color: rgba(255, 255, 255, .68);
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: .01em;
+  line-height: 1.6;
 }
 
 .intro { display: grid; grid-template-columns: 1.25fr .75fr; gap: 70px; align-items: end; background: #f2eee5; color: #12110f; }

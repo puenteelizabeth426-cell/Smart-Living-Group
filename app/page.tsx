@@ -298,7 +298,15 @@ export default function Home() {
                 <source src="/videos/showcase-1.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
-              <figcaption>Outdoor lighting &amp; living design</figcaption>
+              <figcaption>
+                <span className="showcaseTitle">Outdoor audio system</span>
+                <span className="showcaseDescription">
+                  Weather-rated speakers placed around the patio and yard so
+                  music stays balanced and clear from every seat — no single
+                  loud spot, no dead zones. Everything is tuned to blend into
+                  the landscape and controlled from a single tap.
+                </span>
+              </figcaption>
             </figure>
 
             <figure className="showcaseItem">
@@ -312,7 +320,15 @@ export default function Home() {
                 <source src="/videos/showcase-2.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
-              <figcaption>Landscape lighting &amp; audio in action</figcaption>
+              <figcaption>
+                <span className="showcaseTitle">Outdoor kitchen</span>
+                <span className="showcaseDescription">
+                  A fully built outdoor kitchen designed for everyday cooking
+                  and entertaining, with integrated task lighting over the prep
+                  and grill areas and warm ambient lighting that makes the space
+                  usable and inviting long after sunset.
+                </span>
+              </figcaption>
             </figure>
           </div>
         </section>

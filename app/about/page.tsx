@@ -259,24 +259,25 @@ export default function AboutPage() {
       <section className="aboutTeam section">
         <div className="sectionHeader">
           <p className="eyebrow dark">Who We Are</p>
-          <h2>A small team that treats every project as its own.</h2>
+          <h2>An established company that treats every project as its own.</h2>
         </div>
 
         <div className="aboutWhoGrid">
           <p>
-            We are a group of designers and installers who care about the
-            details most people never notice — where a speaker sits so the
-            sound feels even, how a fixture is aimed so it flatters the
-            architecture instead of blinding you, and how cabling is routed so
-            nothing is left exposed. Those choices are what separate a finished
-            outdoor space from a collection of gadgets.
+            We are a full team of designers, engineers and certified installers
+            who care about the details most people never notice — where a
+            speaker sits so the sound feels even, how a fixture is aimed so it
+            flatters the architecture instead of blinding you, and how cabling
+            is routed so nothing is left exposed. Those choices are what
+            separate a finished outdoor space from a collection of gadgets.
           </p>
           <p>
-            We keep our workload deliberate so the same people who plan your
-            project are the ones who see it through. You will not be handed off
-            between departments or left guessing about the next step. From the
-            first walkthrough to the final tuning, you work with a team that
-            knows your space and stands behind the result.
+            With dedicated design, project management and service departments,
+            we have the capacity to take on projects of any scale while giving
+            each one the attention it deserves. A single point of contact
+            coordinates your project from the first walkthrough to the final
+            tuning, so you always know the next step and never get lost between
+            departments.
           </p>
           <p>
             Above all, we want the technology to feel effortless. When the
