@@ -218,14 +218,17 @@ export default function Home() {
 
         <section id="home" className="hero">
           <div className="heroMedia">
-            <Image
-              src="/projects/project-01.webp"
-              alt="Luxury outdoor kitchen with premium lighting and entertainment in Dallas-Fort Worth"
-              fill
-              priority
-              sizes="100vw"
-              style={{ objectFit: "cover" }}
-            />
+            <video
+              className="heroVideo"
+              autoPlay
+              muted
+              loop
+              playsInline
+              poster="/videos/showcase-1-poster.jpg"
+              aria-hidden="true"
+            >
+              <source src="/videos/showcase-1.mp4" type="video/mp4" />
+            </video>
           </div>
 
           <div className="heroOverlay" />
@@ -268,6 +271,49 @@ export default function Home() {
                 </div>
               ))}
             </div>
+          </div>
+        </section>
+
+        <section id="showcase" className="showcase section">
+          <div className="sectionHeader center">
+            <p className="eyebrow">See It In Motion</p>
+
+            <h2>Real projects, brought to life.</h2>
+
+            <p className="catalogIntro">
+              A closer look at the outdoor lighting, audio and living spaces we
+              design and install across Dallas–Fort Worth.
+            </p>
+          </div>
+
+          <div className="showcaseGrid">
+            <figure className="showcaseItem">
+              <video
+                className="showcaseVideo"
+                controls
+                playsInline
+                preload="metadata"
+                poster="/videos/showcase-1-poster.jpg"
+              >
+                <source src="/videos/showcase-1.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <figcaption>Outdoor lighting &amp; living design</figcaption>
+            </figure>
+
+            <figure className="showcaseItem">
+              <video
+                className="showcaseVideo"
+                controls
+                playsInline
+                preload="metadata"
+                poster="/videos/showcase-2-poster.jpg"
+              >
+                <source src="/videos/showcase-2.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <figcaption>Landscape lighting &amp; audio in action</figcaption>
+            </figure>
           </div>
         </section>
 
