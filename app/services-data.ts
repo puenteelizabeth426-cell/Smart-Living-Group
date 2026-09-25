@@ -9,6 +9,7 @@ export type ServiceTopic = {
   keywords: string[];
   intro: string;
   features: { title: string; copy: string }[];
+  gallery?: { src: string; alt: string; caption: string; wide?: boolean }[];
 };
 
 export const serviceTopics: ServiceTopic[] = [
@@ -179,6 +180,34 @@ export const serviceTopics: ServiceTopic[] = [
       {
         title: "Smart Scenes",
         copy: "Automate by time of day, sun or a single tap.",
+      },
+    ],
+    gallery: [
+      {
+        src: "/projects/shades-patio-evening.png",
+        alt: "Luxury covered patio at dusk with motorized outdoor shades lowered around an outdoor living room in Dallas–Fort Worth",
+        caption:
+          "Motorized shades wrap a covered patio into a private, comfortable outdoor room after sunset.",
+        wide: true,
+      },
+      {
+        src: "/projects/shades-installation.png",
+        alt: "Clean, professional motorized roller shade installation showing a discreet aluminum head box on a luxury patio",
+        caption:
+          "Discreet head boxes and concealed wiring for a clean, professional installation.",
+      },
+      {
+        src: "/projects/shades-patio-daytime.png",
+        alt: "Finished luxury patio in daytime with retracted motorized shades framing an open outdoor living space",
+        caption:
+          "Fully retracted, the shades disappear to open the space to light and views.",
+      },
+      {
+        src: "/projects/shades-sun-privacy.png",
+        alt: "Motorized outdoor shades lowered across a patio to provide sun protection and privacy at a luxury Dallas home",
+        caption:
+          "Lowered at a single touch for instant sun control, glare reduction and privacy.",
+        wide: true,
       },
     ],
   },
