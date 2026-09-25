@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return <ServicePage data={{
+    pageClassName: "landscapePage",
     name: "Landscape Lighting",
     eyebrow: "Landscape Lighting • Dallas–Fort Worth",
     headline: "Landscape Lighting Designed for Dallas–Fort Worth Homes.",

@@ -782,4 +782,34 @@ footer img { width: 210px; margin: 0 auto 18px; }
 .seoGallery{background:#fff}.seoGalleryGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:40px}.seoGalleryItem{position:relative;margin:0;overflow:hidden;border-radius:6px;background:#efeeeb;aspect-ratio:3/2}.seoGalleryItem img{display:block;transition:transform .6s ease}.seoGalleryItem:hover img{transform:scale(1.04)}.seoGalleryItemWide{grid-column:1 / -1;aspect-ratio:16/7}.seoGalleryItem figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 22px 16px;background:linear-gradient(0deg,rgba(10,10,10,.82) 0%,rgba(10,10,10,0) 100%);color:#f5f1e8;font-size:.9rem;letter-spacing:.02em}
 @media(max-width:900px){.seoIntro,.seoDetails{grid-template-columns:1fr}.seoProcessGrid,.seoRelatedLinks{grid-template-columns:repeat(2,1fr)}.seoHeroContent{padding-right:0}.navLinks{display:none}}
 .seoPanelIntro{margin:0 0 22px;font-size:1.02rem;line-height:1.65;color:rgba(0,0,0,.72)}.seoPanelDark .seoPanelIntro{color:rgba(255,255,255,.78)}
+
+/* Landscape lighting page — refined green-on-white theme, spacing & sizing */
+.landscapePage .eyebrow.dark{color:#1f8a4c;font-weight:700;letter-spacing:.18em}
+.landscapePage .seoIntro{padding-top:clamp(72px,8vw,120px);padding-bottom:clamp(56px,6vw,90px);gap:clamp(36px,7vw,110px);align-items:center}
+.landscapePage .seoIntro h2{color:#0f2c1b;letter-spacing:-.01em}
+.landscapePage .seoLead{color:#3c4a41;font-size:1.24rem;line-height:1.9}
+.landscapePage .seoDetails{gap:24px;padding-top:clamp(40px,4vw,64px);padding-bottom:clamp(72px,7vw,110px)}
+.landscapePage .seoPanel{background:#f1f8f3;border:1px solid #d9ecdf;padding:clamp(34px,5vw,64px)}
+.landscapePage .seoPanel h2{color:#123320}
+.landscapePage .seoPanelIntro{color:#41544a;font-size:1.06rem;line-height:1.72}
+.landscapePage .seoChecklist li{line-height:1.55;font-size:1.02rem}
+.landscapePage .seoPanel:not(.seoPanelDark) .seoChecklist svg{color:#1f8a4c}
+.landscapePage .seoPanelDark{background:#0e2417}
+.landscapePage .seoPanelDark .seoChecklist svg{color:#5fce8f}
+.landscapePage .seoGallery h2{color:#0f2c1b}
+.landscapePage .seoGalleryGrid{gap:22px;margin-top:48px}
+.landscapePage .seoGalleryItem{border-radius:10px}
+.landscapePage .seoGalleryItem figcaption{font-size:.95rem;padding:34px 24px 18px;background:linear-gradient(0deg,rgba(9,26,17,.9) 0%,rgba(9,26,17,0) 100%)}
+.landscapePage .seoProcess h2{color:#0f2c1b}
+.landscapePage .seoProcessGrid{gap:22px;margin-top:48px}
+.landscapePage .seoProcessGrid article{border-top:3px solid #1f8a4c;background:#f4faf6;padding:34px 30px;border-radius:0 0 8px 8px}
+.landscapePage .seoProcessGrid span{color:#1f8a4c;font-weight:700}
+.landscapePage .seoProcessGrid h3{color:#123320;font-size:1.4rem}
+.landscapePage .seoProcessGrid p{color:#4b584f}
+.landscapePage .seoFaq h2{color:#0f2c1b}
+.landscapePage .seoFaqList details{border-bottom:1px solid #d3e8db;padding:24px 6px}
+.landscapePage .seoFaqList summary{color:#123320}
+.landscapePage .seoFaqList details[open] summary{color:#1f8a4c}
+.landscapePage .seoFaqList p{color:#4b584f}
+@media(max-width:900px){.landscapePage .seoGalleryGrid,.landscapePage .seoProcessGrid{gap:18px}}
 @media(max-width:580px){.seoHero{min-height:78vh}.seoHeroContent{margin-bottom:6vh}.seoProcessGrid,.seoRelatedLinks{grid-template-columns:1fr}.seoPanel{padding:28px 22px}.seoGalleryGrid{grid-template-columns:1fr}.seoGalleryItemWide{aspect-ratio:3/2}}

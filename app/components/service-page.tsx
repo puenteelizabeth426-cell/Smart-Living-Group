@@ -18,6 +18,7 @@ export type ServicePageData = {
   process: { title: string; text: string }[];
   faqs: { question: string; answer: string }[];
   gallery?: { src: string; alt: string; caption?: string }[];
+  pageClassName?: string;
 };
 
 const serviceLinks = [
@@ -60,7 +61,7 @@ export function ServicePage({ data }: { data: ServicePageData }) {
   };
 
   return (
-    <main>
+    <main className={data.pageClassName}>
       <SiteNav />
       <section className="seoHero">
         <div className="seoHeroMedia">
