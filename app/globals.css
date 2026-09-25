@@ -792,8 +792,9 @@ footer img { width: 210px; margin: 0 auto 18px; }
  .landscapePage .seoPanel{background:#f1f8f3;border:1px solid #d9ecdf;padding:clamp(20px,2.2vw,28px)}
  .landscapePage .seoPanel h2{color:#123320;margin-bottom:14px}
  .landscapePage .seoPanelIntro{color:#41544a;font-size:1rem;line-height:1.55;margin-bottom:16px}
-  .landscapePage .seoChecklist{gap:10px}
-  .landscapePage .seoChecklist li{line-height:1.4;font-size:.98rem}
+ .landscapePage .seoChecklist{gap:8px}
+ .landscapePage .seoChecklist li{line-height:1.35;font-size:.95rem}
+ .landscapePage .seoPanel:not(.seoPanelDark) .seoPanelIntro{margin:0 0 16px;font-size:.98rem;line-height:1.5}
 .landscapePage .seoPanel:not(.seoPanelDark) .seoChecklist svg{color:#1f8a4c}
 .landscapePage .seoPanelDark{background:#0e2417}
 .landscapePage .seoPanelDark .seoChecklist svg{color:#5fce8f}
