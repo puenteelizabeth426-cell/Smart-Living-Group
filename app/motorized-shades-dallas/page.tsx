@@ -15,20 +15,63 @@ export const metadata: Metadata = {
     url: "/motorized-shades-dallas",
     images: ["/projects/service-motorized-shades.png"],
   },
-};  
+};
+
 export default function Page() {
-  return <ServicePage data={{
-    name: "Motorized Outdoor Shades",
-    eyebrow: "Motorized Shades • Dallas–Fort Worth",
-    headline: "Motorized Outdoor Shades for Dallas–Fort Worth Patios.",
-    description: "Automated patio shades designed to reduce glare and heat, improve privacy and make covered outdoor spaces more comfortable.",
-    heroImage: "/projects/service-motorized-shades.png",
-    heroAlt: "Motorized outdoor roller shades installed on a luxury covered patio in Dallas-Fort Worth",
-    introduction: "Motorized exterior shades help extend the hours and seasons you can comfortably enjoy a patio. We design each system around the openings, sun exposure, wind conditions, architecture and preferred control method.",
-    seoContent: "Smart Living Group designs and installs custom motorized patio shades and electric outdoor shades throughout Dallas-Fort Worth. Our exterior shade systems are designed for covered patios, outdoor kitchens, pergolas and poolside living spaces, helping reduce direct Texas sun and glare while adding privacy and comfort. We provide motorized shade solutions for homes in Dallas, Fort Worth, Southlake, Colleyville, Keller, Coppell, Irving, Richardson, Arlington, Euless, Frisco, Addison, McKinney, Allen, Mesquite, Lancaster and surrounding DFW communities."
-    benefits: ["Sun, glare and heat reduction", "Added daytime and evening privacy", "Motorized operation with clean hardware", "Remote, keypad, app and voice options", "Preset scenes and schedule integration", "Custom fabrics, openness levels and colors"],
-    applications: ["Covered patios and terraces", "Outdoor kitchens", "Pergolas and cabanas", "West-facing outdoor spaces", "Poolside seating areas", "Hospitality and restaurant patios"],
-    process: [{title:"Consultation",text:"We review the openings, structure, sun exposure and desired privacy."},{title:"Measure & Select",text:"We confirm dimensions, fabric, color, motor and control options."},{title:"Installation",text:"Tracks, housings, power and shades are installed for a clean finish."},{title:"Programming",text:"We set limits, remotes, schedules and smart scenes, then demonstrate operation."}],
-    faqs: [{question:"Do outdoor shades help with Texas heat?",answer:"They can significantly reduce direct sunlight and glare entering a covered patio, helping the space feel more comfortable. Results depend on exposure, fabric and enclosure."},{question:"Can motorized shades provide privacy?",answer:"Yes. Fabric selection and openness level determine visibility and privacy. We help choose the right material for daytime and evening needs."},{question:"How are outdoor shades controlled?",answer:"Depending on the system, shades can use a remote, wall keypad, phone app, schedule, voice command or integrated smart scene."},{question:"Can shades be installed on an existing patio?",answer:"Often, yes. We inspect the structure, opening dimensions, mounting surfaces and available power to determine the best installation approach."}]
-  }} />;
+  return (
+    <ServicePage
+      data={{
+        name: "Motorized Outdoor Shades",
+        eyebrow: "Motorized Shades · Dallas-Fort Worth",
+        headline: "Motorized Outdoor Shades for Dallas-Fort Worth Patios.",
+        description:
+          "Automated patio shades designed to reduce glare and heat, improve privacy and make covered outdoor spaces more comfortable.",
+        heroImage: "/projects/service-motorized-shades.png",
+        heroAlt:
+          "Motorized outdoor roller shades installed on a luxury covered patio in Dallas-Fort Worth",
+        introduction:
+          "Motorized exterior shades help extend the hours and seasons you can comfortably enjoy a patio.",
+        seoContent:
+          "Smart Living Group designs and installs custom motorized patio shades and electric outdoor shades throughout Dallas-Fort Worth.",
+        benefits: [
+          "Sun, glare and heat reduction",
+          "Added daytime and evening privacy",
+          "Motorized operation with clean hardware",
+        ],
+        applications: [
+          "Covered patios and terraces",
+          "Outdoor kitchens",
+          "Pergolas and cabanas",
+          "West-facing outdoor spaces",
+          "Poolside seating areas",
+        ],
+        process: [
+          {
+            title: "Consultation",
+            text: "We review the openings, structure, sun exposure and desired privacy.",
+          },
+          {
+            title: "Measure & Select",
+            text: "We confirm dimensions, fabric, color, motor and control options.",
+          },
+          {
+            title: "Installation",
+            text: "We install and configure the motorized shade system.",
+          },
+        ],
+        faqs: [
+          {
+            question: "Do outdoor shades help with Texas heat?",
+            answer:
+              "They can significantly reduce direct sunlight and glare entering a covered patio, helping the space feel more comfortable.",
+          },
+          {
+            question: "Can motorized outdoor shades be controlled remotely?",
+            answer:
+              "Depending on the system, shades can use a remote, wall keypad, phone app or scheduled controls.",
+          },
+        ],
+      }}
+    />
+  );
 }
