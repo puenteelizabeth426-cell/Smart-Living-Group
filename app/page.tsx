@@ -121,6 +121,7 @@ const services = [
     icon: Lightbulb,
     title: "Landscape Lighting",
     eyebrow: "Architecture after dark",
+    link: "/landscape-lighting-dallas",
     image: "/projects/project-03.webp",
     imageAlt:
       "Landscape lighting grazing stonework and uplighting trees at a residential property",
@@ -392,6 +393,17 @@ export default function Home() {
                         </li>
                       ))}
                     </ul>
+
+                    {service.link && (
+                      <Link
+                        href={service.link}
+                        className="button primary serviceCardButton"
+                        aria-label={`Learn more about ${service.title}`}
+                      >
+                        Explore {service.title}
+                        <ArrowRight size={16} aria-hidden="true" />
+                      </Link>
+                    )}
                   </div>
                 </article>
               );

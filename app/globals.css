@@ -322,6 +322,7 @@ h3 { font-size: 30px; letter-spacing: -.03em; }
 .serviceBody ul { padding: 0; margin: 24px 0 0; display: grid; gap: 12px; list-style: none; color: #37332c; }
 .serviceBody li { display: flex; align-items: center; gap: 10px; }
 .serviceBody li svg { color: var(--gold); flex: none; }
+.serviceCardButton { margin-top: 26px; }
 
 .why { background: var(--bg-soft); }
 .whyHeader { max-width: 780px; margin-bottom: 36px; }
