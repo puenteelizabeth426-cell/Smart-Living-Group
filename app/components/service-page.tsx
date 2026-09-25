@@ -11,6 +11,7 @@ export type ServicePageData = {
   heroImage: string;
   heroAlt: string;
   introduction: string;
+  seoContent?: string;
   benefits: string[];
   applications: string[];
   process: { title: string; text: string }[];
@@ -86,6 +87,15 @@ export function ServicePage({ data }: { data: ServicePageData }) {
         </div>
         <p className="seoLead">{data.introduction}</p>
       </section>
+      {data.seoContent && (
+  <section className="section">
+    <div className="sectionHeader">
+      <p className="eyebrow dark">Local Expertise</p>
+      <h2>Serving Dallas–Fort Worth outdoor spaces.</h2>
+    </div>
+    <p className="seoLead">{data.seoContent}</p>
+  </section>
+)}
 
       <section className="seoDetails section">
         <div className="seoPanel">
