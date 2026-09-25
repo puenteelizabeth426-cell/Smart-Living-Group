@@ -71,6 +71,28 @@ export default function Page() {
               "Depending on the system, shades can use a remote, wall keypad, phone app or scheduled controls.",
           },
         ],
+        gallery: [
+          {
+            src: "/projects/shades-patio-evening.png",
+            alt: "Luxury covered patio at dusk with motorized outdoor shades partially lowered, warm lighting and lounge seating in a Dallas-Fort Worth home",
+            caption: "Motorized outdoor shades on a luxury covered patio, extending comfort into the evening.",
+          },
+          {
+            src: "/projects/shades-sun-privacy.png",
+            alt: "Motorized exterior roller shades fully lowered on a covered patio to provide sun protection and privacy",
+            caption: "Shades lowered for sun, glare and privacy control during peak afternoon heat.",
+          },
+          {
+            src: "/projects/shades-installation.png",
+            alt: "Clean professional motorized roller shade installation with sleek aluminum cassette and side guide tracks",
+            caption: "A clean, professional installation with concealed wiring and premium hardware.",
+          },
+          {
+            src: "/projects/shades-patio-daytime.png",
+            alt: "Finished luxury covered patio in daylight with motorized outdoor shades raised, opening onto a manicured backyard and pool",
+            caption: "Shades raised to open the space to the backyard and pool on a clear day.",
+          },
+        ],
       }}
     />
   );
