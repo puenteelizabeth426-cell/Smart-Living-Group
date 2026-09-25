@@ -17,6 +17,7 @@ export default function Page() {
     heroImage: "/projects/project-03.webp",
     heroAlt: "Professional landscape lighting illuminating trees and gardens at a luxury Dallas-Fort Worth home at night",
     introduction: "We design lighting around your landscape—not around a box of fixtures. Every beam angle, fixture location and lighting zone is carefully planned to showcase your trees, gardens, hardscape and architecture, improve safety along walkways and steps, and extend the hours your family enjoys the outdoors. The result is a property that looks intentional, elegant and welcoming every night of the year.",
+    whyUsIntro: "The Smart Living Group is a full-service outdoor lighting company serving Dallas–Fort Worth. From the first walkthrough to the final after-dark adjustment, one dedicated team handles your custom design, professional installation and long-term support—so your lighting looks flawless and keeps working for years. Here's what sets our work apart:",
     benefits: [
       "Custom lighting design tailored to your property",
       "Durable, low-voltage, outdoor-rated fixtures",

@@ -12,6 +12,7 @@ export type ServicePageData = {
   heroAlt: string;
   introduction: string;
   seoContent?: string;
+  whyUsIntro?: string;
   benefits: string[];
   applications: string[];
   process: { title: string; text: string }[];
@@ -101,7 +102,8 @@ export function ServicePage({ data }: { data: ServicePageData }) {
       <section className="seoDetails section">
         <div className="seoPanel">
           <p className="eyebrow dark">Why Smart Living</p>
-          <h2>Professional design and clean installation.</h2>
+          <h2>Why homeowners choose The Smart Living Group.</h2>
+          {data.whyUsIntro && <p className="seoPanelIntro">{data.whyUsIntro}</p>}
           <ul className="seoChecklist">
             {data.benefits.map((item) => <li key={item}><CheckCircle2 size={18} />{item}</li>)}
           </ul>
