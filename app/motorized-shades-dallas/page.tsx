@@ -3,10 +3,19 @@ import { ServicePage } from "../components/service-page";
 
 export const metadata: Metadata = {
   title: "Motorized Outdoor Shades Dallas | Patio Shades DFW",
-  description: "Motorized outdoor patio shades in Dallas–Fort Worth for sun control, privacy, insect protection and greater comfort in covered outdoor spaces.",
-  alternates: { canonical: "/motorized-shades-dallas" },
-  openGraph: { title: "Motorized Outdoor Shades Dallas–Fort Worth", description: "Automated patio shades for comfort, privacy and sun control.", url: "/motorized-shades-dallas", images: ["/projects/service-motorized-shades.png"] },
-};
+  description:
+    "Motorized outdoor patio shades in Dallas-Fort Worth for sun control, privacy, insect protection and greater comfort in covered outdoor spaces.",
+  alternates: {
+    canonical: "/motorized-shades-dallas",
+  },
+  openGraph: {
+    title: "Motorized Outdoor Shades Dallas-Fort Worth",
+    description:
+      "Automated patio shades for comfort, privacy and sun control.",
+    url: "/motorized-shades-dallas",
+    images: ["/projects/service-motorized-shades.png"],
+  },
+};  
 export default function Page() {
   return <ServicePage data={{
     name: "Motorized Outdoor Shades",
