@@ -126,6 +126,34 @@ export default async function ServicePage({
         </div>
       </section>
 
+      {topic.gallery && topic.gallery.length > 0 && (
+        <section className="serviceGallery section">
+          <div className="sectionHeader">
+            <p className="eyebrow dark">A Closer Look</p>
+            <h2>{`${topic.name} in luxury outdoor spaces.`}</h2>
+          </div>
+
+          <div className="seoGalleryGrid">
+            {topic.gallery.map((item) => (
+              <figure
+                key={item.src}
+                className={`seoGalleryItem${item.wide ? " seoGalleryItemWide" : ""}`}
+              >
+                <Image
+                  src={item.src}
+                  alt={item.alt}
+                  fill
+                  sizes={item.wide ? "100vw" : "(max-width: 900px) 100vw, 50vw"}
+                  style={{ objectFit: "cover" }}
+                  loading="lazy"
+                />
+                <figcaption>{item.caption}</figcaption>
+              </figure>
+            ))}
+          </div>
+        </section>
+      )}
+
       <section className="serviceExplore section">
         <div className="sectionHeader center">
           <p className="eyebrow dark">Explore More</p>

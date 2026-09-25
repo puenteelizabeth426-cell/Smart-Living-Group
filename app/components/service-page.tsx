@@ -16,6 +16,7 @@ export type ServicePageData = {
   applications: string[];
   process: { title: string; text: string }[];
   faqs: { question: string; answer: string }[];
+  gallery?: { src: string; alt: string; caption?: string }[];
 };
 
 const serviceLinks = [
@@ -113,6 +114,33 @@ export function ServicePage({ data }: { data: ServicePageData }) {
           </ul>
         </div>
       </section>
+
+      {data.gallery && data.gallery.length > 0 && (
+        <section className="seoGallery section">
+          <div className="sectionHeader">
+            <p className="eyebrow dark">Recent Work</p>
+            <h2>A closer look at {data.name.toLowerCase()}.</h2>
+          </div>
+          <div className="seoGalleryGrid">
+            {data.gallery.map((photo, index) => (
+              <figure
+                key={photo.src}
+                className={index === 0 ? "seoGalleryItem seoGalleryItemWide" : "seoGalleryItem"}
+              >
+                <Image
+                  src={photo.src}
+                  alt={photo.alt}
+                  width={1200}
+                  height={800}
+                  sizes={index === 0 ? "100vw" : "(max-width: 900px) 100vw, 50vw"}
+                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                />
+                {photo.caption && <figcaption>{photo.caption}</figcaption>}
+              </figure>
+            ))}
+          </div>
+        </section>
+      )}
 
       <section className="seoProcess section">
         <div className="sectionHeader">
