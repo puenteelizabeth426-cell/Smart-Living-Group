@@ -788,11 +788,12 @@ footer img { width: 210px; margin: 0 auto 18px; }
 .landscapePage .seoIntro{padding-top:clamp(72px,8vw,120px);padding-bottom:clamp(56px,6vw,90px);gap:clamp(36px,7vw,110px);align-items:center}
 .landscapePage .seoIntro h2{color:#0f2c1b;letter-spacing:-.01em}
 .landscapePage .seoLead{color:#3c4a41;font-size:1.24rem;line-height:1.9}
-  .landscapePage .seoDetails{gap:24px;padding-top:clamp(32px,3vw,48px);padding-bottom:clamp(48px,5vw,72px)}
-  .landscapePage .seoPanel{background:#f1f8f3;border:1px solid #d9ecdf;padding:clamp(24px,3vw,40px)}
-.landscapePage .seoPanel h2{color:#123320}
-.landscapePage .seoPanelIntro{color:#41544a;font-size:1.06rem;line-height:1.72}
-.landscapePage .seoChecklist li{line-height:1.55;font-size:1.02rem}
+ .landscapePage .seoDetails{gap:24px;padding-top:clamp(28px,2.6vw,40px);padding-bottom:clamp(36px,3.6vw,52px);align-items:start}
+ .landscapePage .seoPanel{background:#f1f8f3;border:1px solid #d9ecdf;padding:clamp(20px,2.2vw,28px)}
+ .landscapePage .seoPanel h2{color:#123320;margin-bottom:14px}
+ .landscapePage .seoPanelIntro{color:#41544a;font-size:1rem;line-height:1.55;margin-bottom:16px}
+  .landscapePage .seoChecklist{gap:10px}
+  .landscapePage .seoChecklist li{line-height:1.4;font-size:.98rem}
 .landscapePage .seoPanel:not(.seoPanelDark) .seoChecklist svg{color:#1f8a4c}
 .landscapePage .seoPanelDark{background:#0e2417}
 .landscapePage .seoPanelDark .seoChecklist svg{color:#5fce8f}
