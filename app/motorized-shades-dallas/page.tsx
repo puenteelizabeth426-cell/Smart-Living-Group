@@ -7,7 +7,6 @@ export const metadata: Metadata = {
   alternates: { canonical: "/motorized-shades-dallas" },
   openGraph: { title: "Motorized Outdoor Shades Dallas–Fort Worth", description: "Automated patio shades for comfort, privacy and sun control.", url: "/motorized-shades-dallas", images: ["/projects/service-motorized-shades.png"] },
 };
-
 export default function Page() {
   return <ServicePage data={{
     name: "Motorized Outdoor Shades",
