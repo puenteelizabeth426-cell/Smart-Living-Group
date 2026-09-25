@@ -21,6 +21,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     ...[
       "/outdoor-lighting-dallas",
+      "/landscape-lighting-dallas",
       "/outdoor-audio-dallas",
       "/outdoor-tv-installation-dallas",
       "/motorized-shades-dallas",
